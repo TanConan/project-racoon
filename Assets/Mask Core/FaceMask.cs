@@ -15,7 +15,7 @@ public class FaceMask : MaskListener
 
   public override void MaskChange(Masks mask)
   {
-    _meshRenderer.enabled = (mask & thisMask) == thisMask;
+    _meshRenderer.enabled = mask.HasFlag(thisMask);
   }
 
   public void OnToggleMask()

@@ -17,7 +17,6 @@ public abstract class MaskListener : MonoBehaviour
     mask.maskChangedEvent.AddListener(MaskChange);
   }
 
-  // Update is called once per frame
   void OnDisable()
   {
     mask.maskChangedEvent.RemoveListener(MaskChange);
