@@ -1,22 +1,34 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerDebug : MonoBehaviour
+public class PlayerDebug : MonoBehaviour, InputSystem.IDebugActions
 {
-  public Mask mask;
-  public void PutOnMask0(InputAction.CallbackContext context)
-  {
-    mask.ChangeMask(Masks.NONE);
-  }
+    public Mask mask;
 
-  public void PutOnMask1(InputAction.CallbackContext context)
-  {
-    mask.ChangeMask(Masks.DISAPPEAR);
-  }
+    private InputSystem inputSystem;
+    private InputSystem.DebugActions debugActions;
 
-  public void PutOnMask2(InputAction.CallbackContext context)
-  {
-    mask.ChangeMask(Masks.FIND);
-  }
+    void Awake()
+    {
+        inputSystem = new();
+        debugActions = inputSystem.Debug;
+        debugActions.AddCallbacks(this);
+        debugActions.Enable();
+    }
+
+    public void OnMask0(InputAction.CallbackContext context)
+    {
+        mask.ChangeMask(Masks.NONE);
+    }
+
+    public void OnMask1(InputAction.CallbackContext context)
+    {
+        mask.ChangeMask(Masks.DISAPPEAR);
+    }
+
+    public void OnMask2(InputAction.CallbackContext context)
+    {
+        mask.ChangeMask(Masks.FIND);
+    }
 
 }

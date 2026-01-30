@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GridMovement : MonoBehaviour
+public class GridMovement : MonoBehaviour, InputSystem.I_2DPlayerActions
 {
     [Header("Object References")]
     public GameObject movePoint;
     public LayerMask collisionMask;
-    
+
 
     [Header("Movement finetuning")]
     public float movementSpeed = 0.5f;
@@ -14,18 +14,26 @@ public class GridMovement : MonoBehaviour
 
     readonly float _gridStep = 0.5f;
     Animator _animator;
-    PlayerInput _playerInput;
-    InputAction _moveAction;
-    
+
+    private InputSystem inputSystem;
+    private InputSystem._2DPlayerActions _2DPlayerActions;
+    private Vector2 inputVector;
+
     void OnEnable()
     {
         movePoint.transform.parent = null;
         _animator = GetComponent<Animator>();
-        _playerInput = GetComponent<PlayerInput>();
-        _moveAction = _playerInput.actions.FindAction("Move");
-        _moveAction.Enable();
+        inputSystem = new();
+        _2DPlayerActions = inputSystem._2DPlayer;
+        _2DPlayerActions.AddCallbacks(this);
+        _2DPlayerActions.Enable();
     }
-    
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        inputVector = context.ReadValue<Vector2>();
+    }
+
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, movePoint.transform.position, movementSpeed * Time.deltaTime);
@@ -43,7 +51,6 @@ public class GridMovement : MonoBehaviour
 
     private void DoMovement()
     {
-        Vector2 inputVector = _moveAction.ReadValue<Vector2>();
         float x = inputVector.x;
         float y = inputVector.y;
 
@@ -53,17 +60,17 @@ public class GridMovement : MonoBehaviour
             TryMove(new Vector3(direction * _gridStep, 0f, 0f));
             return;
         }
-        
-        
+
+
         if (Mathf.Abs(y) > 0.5f)
         {
             float direction = inputVector.y > 0 ? 1f : -1f;
             TryMove(new Vector3(0f, direction * _gridStep, 0f));
             return;
         }
-        
+
     }
-    
+
     private void TryMove(Vector3 direction)
     {
         if (!Physics2D.OverlapCircle(movePoint.transform.position + direction, 0.2f, collisionMask))
