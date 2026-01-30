@@ -12,7 +12,7 @@ public class GridMovement : MonoBehaviour
     public float movementSpeed = 0.5f;
     public float threshold = 0.5f;
 
-    readonly float _gridStep = 1f;
+    readonly float _gridStep = 0.5f;
     Animator _animator;
     PlayerInput _playerInput;
     InputAction _moveAction;
