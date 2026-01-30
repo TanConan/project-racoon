@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 259609280}
   - component: {fileID: 259609279}
   - component: {fileID: 259609281}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 183
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 1474072749}
   - component: {fileID: 1474072748}
   - component: {fileID: 1474072747}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Peter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,23 +370,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2019254911}
   - component: {fileID: 2019254910}
-  - component: {fileID: 2019254909}
   - component: {fileID: 2019254912}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2019254909
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019254908}
-  m_Enabled: 1
 --- !u!20 &2019254910
 Camera:
   m_ObjectHideFlags: 0
@@ -426,9 +417,9 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 183
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: f1509f7acbb91d1438a45807713a0f06, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
