@@ -8,7 +8,7 @@ public abstract class MaskListener : MonoBehaviour
     {
         if (mask == null)
         {
-            mask = Resources.Load<Mask>("Assets/Mask Core/Mask.asset");
+            mask = Resources.Load<Mask>("Assets/Mask Core/Mask");
         }
     }
 
