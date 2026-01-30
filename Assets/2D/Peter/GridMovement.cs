@@ -51,6 +51,7 @@ public class GridMovement : MonoBehaviour
         {
             float direction = inputVector.x > 0 ? 1f : -1f;
             TryMove(new Vector3(direction * _gridStep, 0f, 0f));
+            return;
         }
         
         
@@ -58,6 +59,7 @@ public class GridMovement : MonoBehaviour
         {
             float direction = inputVector.y > 0 ? 1f : -1f;
             TryMove(new Vector3(0f, direction * _gridStep, 0f));
+            return;
         }
         
     }
