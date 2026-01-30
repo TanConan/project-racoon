@@ -984,8 +984,7 @@ MonoBehaviour:
   collisionMask:
     serializedVersion: 2
     m_Bits: 272
-  movementSpeed: 10
-  threshold: 0.1
+  movementSpeed: 8
 --- !u!1 &1555290695
 GameObject:
   m_ObjectHideFlags: 0
