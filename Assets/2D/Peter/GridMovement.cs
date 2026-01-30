@@ -10,7 +10,6 @@ public class GridMovement : MonoBehaviour, InputSystem.I_2DPlayerActions
 
     [Header("Movement finetuning")]
     public float movementSpeed = 0.5f;
-    public float threshold = 0.5f;
 
     readonly float _gridStep = 0.5f;
     Animator _animator;
@@ -38,7 +37,7 @@ public class GridMovement : MonoBehaviour, InputSystem.I_2DPlayerActions
     {
         transform.position = Vector3.MoveTowards(transform.position, movePoint.transform.position, movementSpeed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, movePoint.transform.position) <= threshold)
+        if (Vector3.Distance(transform.position, movePoint.transform.position) == 0)
         {
             DoMovement();
             _animator.SetBool("isMoving", true);
@@ -54,7 +53,8 @@ public class GridMovement : MonoBehaviour, InputSystem.I_2DPlayerActions
         float x = inputVector.x;
         float y = inputVector.y;
 
-        if (Mathf.Abs(x) > 0.5f)
+        float minDistanceToMovementPoint = 0f;
+        if (Mathf.Abs(x) > minDistanceToMovementPoint)
         {
             float direction = inputVector.x > 0 ? 1f : -1f;
             TryMove(new Vector3(direction * _gridStep, 0f, 0f));
@@ -62,7 +62,7 @@ public class GridMovement : MonoBehaviour, InputSystem.I_2DPlayerActions
         }
 
 
-        if (Mathf.Abs(y) > 0.5f)
+        if (Mathf.Abs(y) > minDistanceToMovementPoint)
         {
             float direction = inputVector.y > 0 ? 1f : -1f;
             TryMove(new Vector3(0f, direction * _gridStep, 0f));
