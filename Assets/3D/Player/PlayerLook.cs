@@ -22,7 +22,7 @@ public class PlayerLook : MonoBehaviour
 
   private void Start()
   {
-
+    Cursor.lockState = CursorLockMode.Locked;
   }
 
   private void Update()
