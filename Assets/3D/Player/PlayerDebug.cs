@@ -11,12 +11,12 @@ public class PlayerDebug : MonoBehaviour
 
   public void PutOnMask1(InputAction.CallbackContext context)
   {
-    mask.ChangeMask(Masks.DISAPPEAR);
+    mask.ChangeMask(mask.selected_masks ^ Masks.DISAPPEAR);
   }
 
   public void PutOnMask2(InputAction.CallbackContext context)
   {
-    mask.ChangeMask(Masks.FIND);
+    mask.ChangeMask(mask.selected_masks ^ Masks.FIND);
   }
 
 }
