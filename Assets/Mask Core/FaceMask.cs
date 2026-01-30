@@ -1,12 +1,21 @@
 using UnityEngine;
 
+[RequireComponent(typeof(MeshRenderer))]
 public class FaceMask : MaskListener
 {
   public Masks thisMask;
 
+  private MeshRenderer _meshRenderer;
+
+  public override void Awake()
+  {
+    base.Awake();
+    _meshRenderer = GetComponent<MeshRenderer>();
+  }
+
   public override void MaskChange(Masks mask)
   {
-    Debug.Log(mask);
+    _meshRenderer.enabled = (mask & thisMask) == thisMask;
   }
 
   public void OnToggleMask()
