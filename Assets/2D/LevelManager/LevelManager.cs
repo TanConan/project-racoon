@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,23 +35,23 @@ public class LevelManager : MonoBehaviour
         ReloadLevel();
     }
 
-    public void LoadLevel(int levelId)
+    public IEnumerator LoadLevel()
     {
         Destroy(_currentLevel);
-        _currentLevel = Instantiate(Levels[levelId].Level, transform);
+        yield return new WaitForEndOfFrame();
+        _currentLevel = Instantiate(Levels[CurrentLevelId].Level, transform);
         Player.Teleport(GameObject.FindWithTag("Respawn").transform.position);
-        Camera2D.orthographicSize = Levels[levelId].CamSize;
-
-        CurrentLevelId = levelId;
+        Camera2D.orthographicSize = Levels[CurrentLevelId].CamSize;
     }
 
     public void ReloadLevel()
     {
-        LoadLevel(CurrentLevelId);
+        StartCoroutine(LoadLevel());
     }
 
     public void NextLevel()
     {
-        LoadLevel(++CurrentLevelId);
+        CurrentLevelId++;
+        StartCoroutine(LoadLevel());
     }
 }
