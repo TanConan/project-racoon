@@ -19,7 +19,6 @@ public class InvertController : MaskListener
     {
         if (rendererData == null || invertMaterial == null) return;
 
-        // Stop any existing fade to prevent "flickering" conflicts
         if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
         fadeCoroutine = StartCoroutine(FadeRoutine(enabled));
     }
