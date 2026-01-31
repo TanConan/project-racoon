@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7747892356391362643}
   - component: {fileID: 1583336383581456167}
   - component: {fileID: 1465565069854930955}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WaterTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1505775669, guid: f617ef2b43fcea145b635d931a29bac9, type: 3}
+  m_Sprite: {fileID: -295943362, guid: f617ef2b43fcea145b635d931a29bac9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -191,7 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3314317381835606925}
   - component: {fileID: 6712196714868371740}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BoxSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
