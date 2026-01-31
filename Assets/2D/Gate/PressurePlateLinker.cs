@@ -1,14 +1,15 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PressurePlateLinker : MonoBehaviour
 {
 
-    public DoorLinker door;
+    public List<DoorLinker> doors;
 
     private void Start()
     {
-        if (door == null)
+        if (doors == null)
         {
             Debug.LogWarning("Warning: Pressure plate is not linked to a door.");
         }
@@ -17,12 +18,18 @@ public class PressurePlateLinker : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log(other.name);
-        door.SetLocked(true);
+
+        foreach (var door in doors)
+        {
+            door.SetLocked(true);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log(other.name);
-        door.SetLocked(false);
+        foreach (var door in doors)
+        {
+            door.SetLocked(false);
+        }
     }
 }
