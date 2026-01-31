@@ -584,8 +584,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLook
   sensitivity: 0.1
-  yLookLimit: 50
-  xLookLimit: 50
+  yLookLimit: 75
+  xLookLimit: 170
   fovChangeSpeed: 60
   fovCursorSpeedSubtraction: 50
   fovChangeMinAngle: 10
