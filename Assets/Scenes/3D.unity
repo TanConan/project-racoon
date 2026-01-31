@@ -337,7 +337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLook
   sensitivity: 0.1
   yLookLimit: 50
-  xLookLimit: 30
+  xLookLimit: 50
 --- !u!114 &330585550
 MonoBehaviour:
   m_ObjectHideFlags: 0
