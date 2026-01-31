@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8891564581937730628}
   - component: {fileID: -1299002633344155899}
-  - component: {fileID: 7743852532779184655}
   - component: {fileID: 6598207146385023683}
   - component: {fileID: 780823685565925544}
   - component: {fileID: 2110932142974767049}
@@ -60,18 +59,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7743852532779184655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3405206314096011616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40b70c3ebc16e4ad499c9e0071d163fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BoxAnimationListener
 --- !u!114 &6598207146385023683
 MonoBehaviour:
   m_ObjectHideFlags: 0
