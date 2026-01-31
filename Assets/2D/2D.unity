@@ -181,17 +181,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1675608436306670765, guid: 716c55d04ecce48ddbb0479d7b68c0ea, type: 3}
   m_PrefabInstance: {fileID: 6503630756645989862}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &121730709 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4918658847478387600, guid: 716c55d04ecce48ddbb0479d7b68c0ea, type: 3}
-  m_PrefabInstance: {fileID: 6503630756645989862}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75d2cc4f65de44e26834465bcdb21a03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DoorLinker
 --- !u!1 &140041753
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,7 +603,7 @@ MonoBehaviour:
   Levels:
   - CamSize: 8.5
     Level: {fileID: 5501340381077870786, guid: 0f749d2c5df3d4d6f99733a21ccee9a3, type: 3}
-  - CamSize: 6
+  - CamSize: 4.5
     Level: {fileID: 5501340381077870786, guid: 41a508cebcf941d4d82234ef7e6a8c06, type: 3}
   - CamSize: 5
     Level: {fileID: 5501340381077870786, guid: 2bfe56c768a5f89468de830f14c157c3, type: 3}
@@ -3548,7 +3537,7 @@ PrefabInstance:
     - target: {fileID: 3291760779670688314, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 121730709}
+      objectReference: {fileID: 0}
     - target: {fileID: 3796626926481123992, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5
