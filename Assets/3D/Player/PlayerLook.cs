@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -64,6 +65,11 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
     {
         if (!context.performed) return;
         if (!unlockedMasks.HasFlag(ActiveMasks.RedBlueMask)) return;
+        ToggleMask0();
+    }
+
+    public void ToggleMask0()
+    {
         maskStore.ToggleMask(ActiveMasks.RedBlueMask);
     }
 
@@ -71,6 +77,11 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
     {
         if (!context.performed) return;
         if (!unlockedMasks.HasFlag(ActiveMasks.TwinMask)) return;
+        maskStore.ToggleMask(ActiveMasks.TwinMask);
+    }
+
+    public void ToggleMask1()
+    {
         maskStore.ToggleMask(ActiveMasks.TwinMask);
     }
 
@@ -82,6 +93,18 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
         wantedFOV = fovNormal;
         // TODO REMOVE
         unlockedMasks = ActiveMasks.RedBlueMask | ActiveMasks.TwinMask;
+    }
+
+    void Start()
+    {
+        StartCoroutine(ShowTutorial());
+    }
+
+    private IEnumerator ShowTutorial()
+    {
+        yield return new WaitForSeconds(5);
+        Tutorial.Instance.Show(TutorialText.ZOOM);
+        Tutorial.Instance.Show(TutorialText.WASD);
     }
 
     private void Update()
