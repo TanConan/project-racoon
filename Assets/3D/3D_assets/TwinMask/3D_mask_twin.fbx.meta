@@ -3,7 +3,27 @@ guid: 03d2ae547a500b247812f3aac51ae56e
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: phantom_mask_sub_mask_phantom_m_Height
+    second: {fileID: 2800000, guid: 73d47573c2e6f3245a945bc106283047, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: phantom_mask_sub_mask_phantom_m_Metallic
+    second: {fileID: 2800000, guid: bc73121b3601ce646b7a317bbcf3d809, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: phantom_mask_sub_mask_phantom_m_Normal
+    second: {fileID: 2800000, guid: bc963c76144931f478c032fecaa42bf1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: phantom_mask_sub_mask_phantom_m_Roughness
+    second: {fileID: 2800000, guid: fdbba173318771640a41ee60cbb9c683, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
