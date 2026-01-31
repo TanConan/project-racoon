@@ -614,10 +614,10 @@ MonoBehaviour:
   Levels:
   - CamSize: 8.5
     Level: {fileID: 5501340381077870786, guid: 0f749d2c5df3d4d6f99733a21ccee9a3, type: 3}
-  - CamSize: 5
+  - CamSize: 6
     Level: {fileID: 5501340381077870786, guid: 41a508cebcf941d4d82234ef7e6a8c06, type: 3}
   - CamSize: 5
-    Level: {fileID: 5501340381077870786, guid: 60f6d488ac6395b4985e4d365d9b7800, type: 3}
+    Level: {fileID: 5501340381077870786, guid: 2bfe56c768a5f89468de830f14c157c3, type: 3}
   - CamSize: 5
     Level: {fileID: 5501340381077870786, guid: ec8d36d6ab42a85419770238102c06dd, type: 3}
   - CamSize: 5
