@@ -1373,6 +1373,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.98599243
       objectReference: {fileID: 0}
+    - target: {fileID: 1830644415647441331, guid: 5e31b56fda122d249a226586fc720f9d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2733501832719958932, guid: 5e31b56fda122d249a226586fc720f9d, type: 3}
       propertyPath: m_Name
       value: TwinMask
