@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8520451582611378576}
   - component: {fileID: 8264104456615227218}
-  - component: {fileID: 4591534502478741080}
   - component: {fileID: 7446774606611524463}
   m_Layer: 8
   m_Name: Door
@@ -93,20 +92,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &4591534502478741080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878182126587359801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75d2cc4f65de44e26834465bcdb21a03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DoorLinker
-  lockedSprite: {fileID: -593292354, guid: 24f88288eb8a6fc4ea6e3f30edd626ed, type: 3}
-  unlockedSprite: {fileID: -32441603, guid: 24f88288eb8a6fc4ea6e3f30edd626ed, type: 3}
 --- !u!61 &7446774606611524463
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162,6 +147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1675608436306670765}
+  - component: {fileID: 3949836969742786671}
   m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
@@ -185,3 +171,17 @@ Transform:
   - {fileID: 8520451582611378576}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3949836969742786671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4600431686941593931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d2cc4f65de44e26834465bcdb21a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorLinker
+  lockedSprite: {fileID: -593292354, guid: 24f88288eb8a6fc4ea6e3f30edd626ed, type: 3}
+  unlockedSprite: {fileID: -32441603, guid: 24f88288eb8a6fc4ea6e3f30edd626ed, type: 3}

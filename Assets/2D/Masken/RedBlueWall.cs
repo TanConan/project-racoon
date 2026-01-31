@@ -1,53 +1,53 @@
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class RedBlueWall : MaskListener
 {
+  public bool isRedwall;
+  private Collider2D _collider;
+  private SpriteRenderer _spriteRenderer;
 
-    public bool isRedwall;
-    private Collider2D _collider;
-    private SpriteRenderer _spriteRenderer;
+  public override void Awake()
+  {
+    base.Awake();
+    _collider = GetComponent<Collider2D>();
+    _spriteRenderer = GetComponent<SpriteRenderer>();
 
-    public override void Awake()
+    _spriteRenderer.color = Color.red;
+    if (!isRedwall) _spriteRenderer.color = Color.blue;
+  }
+
+  private void Start()
+  {
+    FlipWallStatus(MaskStore.SelectedActiveMasks);
+  }
+
+  public override void MaskChange(ActiveMasks activeMasks)
+  {
+    FlipWallStatus(activeMasks);
+  }
+
+  private void FlipWallStatus(ActiveMasks activeMasks)
+  {
+    var hit = Physics2D.Raycast(transform.position, Vector2.zero, 0);
+
+    if (hit)
     {
-        base.Awake();
-        _collider = GetComponent<Collider2D>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        
-        _spriteRenderer.color = Color.red;
-        if (!isRedwall)
+      if (hit.collider.GetComponent<Box>()) return;
+
+      if (hit.collider.TryGetComponent<Player2D>(out var player))
+      {
+        // 2. Logik nur prüfen, WENN es ein Player ist
+        var shouldDie = activeMasks.HasFlag(ActiveMasks.RedBlueMask) ? isRedwall : !isRedwall;
+
+        if (shouldDie)
         {
-            _spriteRenderer.color = Color.blue;
+          player.Die();
+          return;
         }
+      }
     }
 
-    void Start()
-    {
-        FlipWallStatus(MaskStore.SelectedActiveMasks);
-    }
-
-    public override void MaskChange(ActiveMasks activeMasks)
-    {
-        FlipWallStatus(activeMasks);
-    }
-
-    private void FlipWallStatus(ActiveMasks activeMasks)
-    {
-        
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, 0);
-
-        if (hit)
-        {
-            if (hit.collider.GetComponent<Box>()) return;
-
-            if (hit.collider.GetComponent<Player2D>())
-            {
-                hit.collider.GetComponent<Player2D>().Die();
-                return;
-            }
-        }
-        
-        _collider.enabled = activeMasks.HasFlag(ActiveMasks.RedBlueMask) ? isRedwall : !isRedwall;
-        _spriteRenderer.enabled =  activeMasks.HasFlag(ActiveMasks.RedBlueMask) ? isRedwall : !isRedwall;
-    }
+    _collider.enabled = activeMasks.HasFlag(ActiveMasks.RedBlueMask) ? isRedwall : !isRedwall;
+    _spriteRenderer.enabled = activeMasks.HasFlag(ActiveMasks.RedBlueMask) ? isRedwall : !isRedwall;
+  }
 }

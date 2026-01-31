@@ -3,30 +3,23 @@ using UnityEngine;
 
 public class PressurePlateLinker : MonoBehaviour
 {
+  public List<DoorLinker> doors;
 
-    public List<DoorLinker> doors;
+  private void Start()
+  {
+    if (doors == null) Debug.LogWarning("Warning: Pressure plate is not linked to a door.");
+  }
 
-    private void Start()
-    {
-        if (doors == null)
-        {
-            Debug.LogWarning("Warning: Pressure plate is not linked to a door.");
-        }
-    }
+  private void OnTriggerEnter2D(Collider2D other)
+  {
+    Debug.Log("pressure plate enter");
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        foreach (var door in doors)
-        {
-            door.SetLocked(true);
-        }
-    }
+    foreach (var door in doors) door.SetLocked(false);
+  }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        foreach (var door in doors)
-        {
-            door.SetLocked(false);
-        }
-    }
+  private void OnTriggerExit2D(Collider2D other)
+  {
+    Debug.Log("pressure plate exit");
+    foreach (var door in doors) door.SetLocked(true);
+  }
 }
