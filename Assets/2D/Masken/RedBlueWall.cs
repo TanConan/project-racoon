@@ -33,6 +33,20 @@ public class RedBlueWall : MaskListener
 
     private void FlipWallStatus(ActiveMasks activeMasks)
     {
+        
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, 0);
+
+        if (hit)
+        {
+            if (hit.collider.GetComponent<Box>()) return;
+
+            if (hit.collider.GetComponent<Player2D>())
+            {
+                hit.collider.GetComponent<Player2D>().Die();
+                return;
+            }
+        }
+        
         _collider.enabled = activeMasks.HasFlag(ActiveMasks.RedBlueMask) ? isRedwall : !isRedwall;
         _spriteRenderer.enabled =  activeMasks.HasFlag(ActiveMasks.RedBlueMask) ? isRedwall : !isRedwall;
     }
