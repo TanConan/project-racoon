@@ -6,22 +6,19 @@ public class LevelInformation
 {
     public float CamSize;
     public GameObject Level;
-    public Transform SpawnPoint;
-
 }
 
 public class LevelManager : MonoBehaviour
 {
-    
     public static LevelManager Instance;
-    
+
     public Camera Camera2D;
     public GridMovement Player;
-    
+
     public List<LevelInformation> Levels;
 
     public int CurrentLevelId = 0;
-    
+
     private GameObject _currentLevel;
 
     void Awake()
@@ -34,19 +31,14 @@ public class LevelManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        foreach (var level in Levels)
-        {
-            Destroy(level.Level);
-        }
-        
-        LoadLevel(CurrentLevelId);
+        ReloadLevel();
     }
-
 
     public void LoadLevel(int levelId)
     {
+        Destroy(_currentLevel);
         _currentLevel = Instantiate(Levels[levelId].Level, transform);
-        Player.Teleport(Levels[levelId].SpawnPoint.position);
+        Player.Teleport(GameObject.FindWithTag("Respawn").transform.position);
         Camera2D.orthographicSize = Levels[levelId].CamSize;
 
         CurrentLevelId = levelId;
@@ -54,8 +46,11 @@ public class LevelManager : MonoBehaviour
 
     public void ReloadLevel()
     {
-        Destroy(_currentLevel);
         LoadLevel(CurrentLevelId);
     }
-    
+
+    public void NextLevel()
+    {
+        LoadLevel(CurrentLevelId++);
+    }
 }

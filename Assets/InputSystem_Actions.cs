@@ -357,6 +357,15 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reset"",
+                    ""type"": ""Button"",
+                    ""id"": ""eb0ae215-d364-4484-bbee-36567c031ddd"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -390,6 +399,17 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Mask2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f9b60a59-7deb-42c9-9201-a45cc327a39d"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reset"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -866,6 +886,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         m_Debug_Mask0 = m_Debug.FindAction("Mask0", throwIfNotFound: true);
         m_Debug_Mask1 = m_Debug.FindAction("Mask1", throwIfNotFound: true);
         m_Debug_Mask2 = m_Debug.FindAction("Mask2", throwIfNotFound: true);
+        m_Debug_Reset = m_Debug.FindAction("Reset", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1173,6 +1194,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m_Debug_Mask0;
     private readonly InputAction m_Debug_Mask1;
     private readonly InputAction m_Debug_Mask2;
+    private readonly InputAction m_Debug_Reset;
     /// <summary>
     /// Provides access to input actions defined in input action map "Debug".
     /// </summary>
@@ -1196,6 +1218,10 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Debug/Mask2".
         /// </summary>
         public InputAction @Mask2 => m_Wrapper.m_Debug_Mask2;
+        /// <summary>
+        /// Provides access to the underlying input action "Debug/Reset".
+        /// </summary>
+        public InputAction @Reset => m_Wrapper.m_Debug_Reset;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1231,6 +1257,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Mask2.started += instance.OnMask2;
             @Mask2.performed += instance.OnMask2;
             @Mask2.canceled += instance.OnMask2;
+            @Reset.started += instance.OnReset;
+            @Reset.performed += instance.OnReset;
+            @Reset.canceled += instance.OnReset;
         }
 
         /// <summary>
@@ -1251,6 +1280,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Mask2.started -= instance.OnMask2;
             @Mask2.performed -= instance.OnMask2;
             @Mask2.canceled -= instance.OnMask2;
+            @Reset.started -= instance.OnReset;
+            @Reset.performed -= instance.OnReset;
+            @Reset.canceled -= instance.OnReset;
         }
 
         /// <summary>
@@ -1561,6 +1593,13 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMask2(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Reset" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnReset(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

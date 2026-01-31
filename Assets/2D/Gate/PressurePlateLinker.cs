@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,15 +16,13 @@ public class PressurePlateLinker : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log(other.name);
-
         foreach (var door in doors)
         {
             door.SetLocked(true);
         }
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         foreach (var door in doors)
         {
