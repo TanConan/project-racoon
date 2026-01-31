@@ -23,7 +23,7 @@ public class FaceMask : MonoBehaviour
         {
             PlayerLook player = FindFirstObjectByType<PlayerLook>();
             player.UnlockMask(thisMask);
-            player.ToggleMask0();
+            player.maskStore.ToggleMask(thisMask);
             Tutorial.Instance.Show(tutorialText);
             Destroy(gameObject);
         }

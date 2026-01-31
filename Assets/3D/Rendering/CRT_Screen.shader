@@ -3,6 +3,7 @@ Shader "Custom/CRT_Screen"
     Properties
     {
         _BlitTexture ("Base (RGB)", 2D) = "white" {}
+        _InvertIntensity ("Invert Intensity", Range(0, 1)) = 0
         _Zoom ("Zoom", Range(0.5, 1.5)) = 1.0
         _Curvature ("Curvature Intensity", Range(0, 5)) = 0.5
         _VignetteWidth ("Vignette Width", Range(0, 1)) = 0.75
@@ -37,6 +38,7 @@ Shader "Custom/CRT_Screen"
             };
 
             sampler2D _BlitTexture;
+            float _InvertIntensity;
             float _Zoom;
             float4 _MainTex_ST;
             float _Curvature;
@@ -91,6 +93,12 @@ Shader "Custom/CRT_Screen"
                 float b = tex2D(_BlitTexture, float2(curvedUV.x - split, curvedUV.y)).b;
                 
                 float3 col = float3(r, g, b);
+
+                // --- NEW INVERSION LOGIC ---
+                // We calculate the inverted color
+                float3 invertedCol = 1.0 - col;
+                // We lerp between normal and inverted based on intensity
+                col = lerp(col, invertedCol, _InvertIntensity);
 
                 // --- 3. SCANLINES ---
                 // Simple sine wave based on Y UV
