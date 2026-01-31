@@ -105,6 +105,7 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
         yield return new WaitForSeconds(5);
         Tutorial.Instance.Show(TutorialText.ZOOM);
         Tutorial.Instance.Show(TutorialText.WASD);
+        Tutorial.Instance.Show(TutorialText.RESET);
     }
 
     private void Update()
