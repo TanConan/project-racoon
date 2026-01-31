@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class FaceMask : MaskListener
 {
-  public Masks thisMask;
+  public ActiveMasks thisMask;
 
   private MeshRenderer _meshRenderer;
 
@@ -13,14 +13,14 @@ public class FaceMask : MaskListener
     _meshRenderer = GetComponent<MeshRenderer>();
   }
 
-  public override void MaskChange(Masks mask)
+  public override void MaskChange(ActiveMasks mask)
   {
     _meshRenderer.enabled = (mask & thisMask) == thisMask;
   }
 
   public void OnToggleMask()
   {
-    Masks currentMasks = mask.selected_masks;
+    ActiveMasks currentMasks = mask.SelectedActiveMasks;
     currentMasks ^= thisMask;
     mask.ChangeMask(currentMasks);
   }
