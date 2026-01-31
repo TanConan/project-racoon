@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour
 
     public Camera Camera2D;
     public GridMovement Player;
+    public Animator resetAnimator;
 
     public List<LevelInformation> Levels;
 
@@ -46,6 +47,7 @@ public class LevelManager : MonoBehaviour
 
     public void ReloadLevel()
     {
+        resetAnimator.SetTrigger("reset");
         StartCoroutine(LoadLevel());
     }
 

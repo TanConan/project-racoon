@@ -250,6 +250,15 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Reset"",
+                    ""type"": ""Button"",
+                    ""id"": ""1c344a6b-6d35-4454-b683-bf02beaf0e96"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -384,27 +393,10 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Debug"",
-            ""id"": ""72e101d4-7a6d-4b11-b5e1-8c6a3e0acc7f"",
-            ""actions"": [
-                {
-                    ""name"": ""Reset"",
-                    ""type"": ""Button"",
-                    ""id"": ""eb0ae215-d364-4484-bbee-36567c031ddd"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
+                },
                 {
                     ""name"": """",
-                    ""id"": ""f9b60a59-7deb-42c9-9201-a45cc327a39d"",
+                    ""id"": ""547b5fc6-2d45-44c1-adf7-a937ee2a9867"",
                     ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -884,9 +876,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         // 2DPlayer
         m__2DPlayer = asset.FindActionMap("2DPlayer", throwIfNotFound: true);
         m__2DPlayer_Move = m__2DPlayer.FindAction("Move", throwIfNotFound: true);
-        // Debug
-        m_Debug = asset.FindActionMap("Debug", throwIfNotFound: true);
-        m_Debug_Reset = m_Debug.FindAction("Reset", throwIfNotFound: true);
+        m__2DPlayer_Reset = m__2DPlayer.FindAction("Reset", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -900,7 +890,6 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     {
         UnityEngine.Debug.Assert(!m__3DPlayer.enabled, "This will cause a leak and performance issues, InputSystem._3DPlayer.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m__2DPlayer.enabled, "This will cause a leak and performance issues, InputSystem._2DPlayer.Disable() has not been called.");
-        UnityEngine.Debug.Assert(!m_Debug.enabled, "This will cause a leak and performance issues, InputSystem.Debug.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, InputSystem.UI.Disable() has not been called.");
     }
 
@@ -1129,6 +1118,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputActionMap m__2DPlayer;
     private List<I_2DPlayerActions> m__2DPlayerActionsCallbackInterfaces = new List<I_2DPlayerActions>();
     private readonly InputAction m__2DPlayer_Move;
+    private readonly InputAction m__2DPlayer_Reset;
     /// <summary>
     /// Provides access to input actions defined in input action map "2DPlayer".
     /// </summary>
@@ -1144,6 +1134,10 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "_2DPlayer/Move".
         /// </summary>
         public InputAction @Move => m_Wrapper.m__2DPlayer_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "_2DPlayer/Reset".
+        /// </summary>
+        public InputAction @Reset => m_Wrapper.m__2DPlayer_Reset;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1173,6 +1167,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @Reset.started += instance.OnReset;
+            @Reset.performed += instance.OnReset;
+            @Reset.canceled += instance.OnReset;
         }
 
         /// <summary>
@@ -1187,6 +1184,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @Reset.started -= instance.OnReset;
+            @Reset.performed -= instance.OnReset;
+            @Reset.canceled -= instance.OnReset;
         }
 
         /// <summary>
@@ -1220,102 +1220,6 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="_2DPlayerActions" /> instance referencing this action map.
     /// </summary>
     public _2DPlayerActions @_2DPlayer => new _2DPlayerActions(this);
-
-    // Debug
-    private readonly InputActionMap m_Debug;
-    private List<IDebugActions> m_DebugActionsCallbackInterfaces = new List<IDebugActions>();
-    private readonly InputAction m_Debug_Reset;
-    /// <summary>
-    /// Provides access to input actions defined in input action map "Debug".
-    /// </summary>
-    public struct DebugActions
-    {
-        private @InputSystem m_Wrapper;
-
-        /// <summary>
-        /// Construct a new instance of the input action map wrapper class.
-        /// </summary>
-        public DebugActions(@InputSystem wrapper) { m_Wrapper = wrapper; }
-        /// <summary>
-        /// Provides access to the underlying input action "Debug/Reset".
-        /// </summary>
-        public InputAction @Reset => m_Wrapper.m_Debug_Reset;
-        /// <summary>
-        /// Provides access to the underlying input action map instance.
-        /// </summary>
-        public InputActionMap Get() { return m_Wrapper.m_Debug; }
-        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
-        public void Enable() { Get().Enable(); }
-        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
-        public void Disable() { Get().Disable(); }
-        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
-        public bool enabled => Get().enabled;
-        /// <summary>
-        /// Implicitly converts an <see ref="DebugActions" /> to an <see ref="InputActionMap" /> instance.
-        /// </summary>
-        public static implicit operator InputActionMap(DebugActions set) { return set.Get(); }
-        /// <summary>
-        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
-        /// </summary>
-        /// <param name="instance">Callback instance.</param>
-        /// <remarks>
-        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
-        /// </remarks>
-        /// <seealso cref="DebugActions" />
-        public void AddCallbacks(IDebugActions instance)
-        {
-            if (instance == null || m_Wrapper.m_DebugActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_DebugActionsCallbackInterfaces.Add(instance);
-            @Reset.started += instance.OnReset;
-            @Reset.performed += instance.OnReset;
-            @Reset.canceled += instance.OnReset;
-        }
-
-        /// <summary>
-        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
-        /// </summary>
-        /// <remarks>
-        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
-        /// </remarks>
-        /// <seealso cref="DebugActions" />
-        private void UnregisterCallbacks(IDebugActions instance)
-        {
-            @Reset.started -= instance.OnReset;
-            @Reset.performed -= instance.OnReset;
-            @Reset.canceled -= instance.OnReset;
-        }
-
-        /// <summary>
-        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="DebugActions.UnregisterCallbacks(IDebugActions)" />.
-        /// </summary>
-        /// <seealso cref="DebugActions.UnregisterCallbacks(IDebugActions)" />
-        public void RemoveCallbacks(IDebugActions instance)
-        {
-            if (m_Wrapper.m_DebugActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        /// <summary>
-        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
-        /// </summary>
-        /// <remarks>
-        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
-        /// </remarks>
-        /// <seealso cref="DebugActions.AddCallbacks(IDebugActions)" />
-        /// <seealso cref="DebugActions.RemoveCallbacks(IDebugActions)" />
-        /// <seealso cref="DebugActions.UnregisterCallbacks(IDebugActions)" />
-        public void SetCallbacks(IDebugActions instance)
-        {
-            foreach (var item in m_Wrapper.m_DebugActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_DebugActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    /// <summary>
-    /// Provides a new <see cref="DebugActions" /> instance referencing this action map.
-    /// </summary>
-    public DebugActions @Debug => new DebugActions(this);
 
     // UI
     private readonly InputActionMap m_UI;
@@ -1585,14 +1489,6 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
-    }
-    /// <summary>
-    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Debug" which allows adding and removing callbacks.
-    /// </summary>
-    /// <seealso cref="DebugActions.AddCallbacks(IDebugActions)" />
-    /// <seealso cref="DebugActions.RemoveCallbacks(IDebugActions)" />
-    public interface IDebugActions
-    {
         /// <summary>
         /// Method invoked when associated input action "Reset" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
