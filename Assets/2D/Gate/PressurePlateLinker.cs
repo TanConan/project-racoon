@@ -14,14 +14,15 @@ public class PressurePlateLinker : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        door.SetLocked(false);
-    }
-
     void OnTriggerExit2D(Collider2D other)
     {
+        Debug.Log(other.name);
         door.SetLocked(true);
     }
 
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        Debug.Log(other.name);
+        door.SetLocked(false);
+    }
 }
