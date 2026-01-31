@@ -38,6 +38,7 @@ public class LevelManager : MonoBehaviour
 
     public IEnumerator LoadLevel()
     {
+        yield return new WaitForSeconds(0.2f);
         Destroy(_currentLevel);
         yield return new WaitForEndOfFrame();
         _currentLevel = Instantiate(Levels[CurrentLevelId].Level, transform);
