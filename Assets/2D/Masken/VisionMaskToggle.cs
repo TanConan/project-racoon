@@ -15,6 +15,6 @@ public class VisionMaskToggle : MaskListener
 
     private void ToggleVisibility(ActiveMasks activeMasks)
     {
-        GetComponent<TilemapRenderer>().enabled = activeMasks.HasFlag(ActiveMasks.FIND);
+        GetComponent<TilemapRenderer>().enabled = activeMasks.HasFlag(ActiveMasks.VisionMask);
     }
 }
