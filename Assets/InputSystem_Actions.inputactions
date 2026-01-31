@@ -32,6 +32,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleMask0",
+                    "type": "Button",
+                    "id": "67894df9-15b3-42cb-90a9-d104c3252e41",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleMask1",
+                    "type": "Button",
+                    "id": "daad1440-3da4-4b9a-b364-2f377e0ffba9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -87,6 +105,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91a1710b-e920-41ef-be31-5e708ba25c53",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleMask0",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ca96750-c1ac-4097-b6a6-b34b3ee38809",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleMask1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -246,33 +286,6 @@
             "id": "72e101d4-7a6d-4b11-b5e1-8c6a3e0acc7f",
             "actions": [
                 {
-                    "name": "Mask0",
-                    "type": "Button",
-                    "id": "21f2aa33-e8a3-4779-8eb2-fd32971f2d59",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Mask1",
-                    "type": "Button",
-                    "id": "ff9ed0e0-3009-46a9-8145-f8cc7b885e3a",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Mask2",
-                    "type": "Button",
-                    "id": "e188fc77-c898-45b7-8e25-dc912d3e98ff",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Reset",
                     "type": "Button",
                     "id": "eb0ae215-d364-4484-bbee-36567c031ddd",
@@ -283,39 +296,6 @@
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "0a55c0ae-68ef-477e-8228-2fce8cfda699",
-                    "path": "<Keyboard>/1",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Mask0",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "d646f695-14ae-4e33-b23a-fb91b3fa56e5",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Mask1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7af2067b-7374-4b61-b765-14537258522c",
-                    "path": "<Keyboard>/3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Mask2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "f9b60a59-7deb-42c9-9201-a45cc327a39d",

@@ -1,27 +1,32 @@
 using UnityEngine;
 
-[RequireComponent(typeof(MeshRenderer))]
-public class FaceMask : MaskListener
+[RequireComponent(typeof(Collider))]
+public class FaceMask : MonoBehaviour
 {
-  public ActiveMasks thisMask;
+    public ActiveMasks thisMask;
+    public float speed;
+    public float rotateSpeed;
+    public float collectDistance;
 
-  private MeshRenderer _meshRenderer;
+    private bool collect;
 
-  public override void Awake()
-  {
-    base.Awake();
-    _meshRenderer = GetComponent<MeshRenderer>();
-  }
+    public void Update()
+    {
+        if (!collect) return;
+        transform.SetPositionAndRotation(
+            Vector3.MoveTowards(transform.position, Camera.main.transform.position, speed * Time.deltaTime),
+            Quaternion.RotateTowards(transform.rotation, Camera.main.transform.rotation, rotateSpeed * Time.deltaTime)
+        );
 
-  public override void MaskChange(ActiveMasks mask)
-  {
-    _meshRenderer.enabled = (mask & thisMask) == thisMask;
-  }
+        if (Vector3.Distance(Camera.main.transform.position, transform.position) <= collectDistance)
+        {
+            FindFirstObjectByType<PlayerLook>().UnlockMask(thisMask);
+            Destroy(gameObject);
+        }
+    }
 
-  public void OnToggleMask()
-  {
-    ActiveMasks currentMasks = MaskStore.SelectedActiveMasks;
-    currentMasks ^= thisMask;
-    MaskStore.ChangeMask(currentMasks);
-  }
+    public void OnToggleMask()
+    {
+        collect = true;
+    }
 }
