@@ -46,9 +46,8 @@ public class Box : MonoBehaviour
     return true;
   }
 
-  public void DestroyWithMovePoint()
-  {
-    Destroy(gameObject);
-    Destroy(movePoint);
-  }
+    private void OnDestroy()
+    {
+        Destroy(movePoint);
+    }
 }

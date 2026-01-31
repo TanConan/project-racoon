@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Holes : MonoBehaviour
@@ -6,12 +7,19 @@ public class Holes : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Box>())
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<Animator>().SetTrigger("FallTrigger");
+            StartCoroutine(DelayedDestroyBox(collision.gameObject));
         }
 
         if (collision.gameObject.GetComponent<Player2D>())
         {
             collision.gameObject.GetComponent<Player2D>().Die();
         }
+    }
+
+    public IEnumerator DelayedDestroyBox(GameObject box)
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(box);
     }
 }
