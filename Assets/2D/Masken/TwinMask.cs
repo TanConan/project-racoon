@@ -12,7 +12,11 @@ public class TwinMask : MaskListener
     // Twin mask changed
     Debug.Log("twin mask on: " + TwinMaskOn);
     var twin = GameObject.FindWithTag("Twin");
-    if (twin == null) return;
+    if (twin == null)
+    {
+      Debug.Log("twin not found");
+      return;
+    }
 
     var oldPlayerPos = LevelManager.Instance.Player.transform.position;
 
