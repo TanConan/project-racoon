@@ -1,16 +1,27 @@
+using System;
 using UnityEngine;
 
 public class PressurePlateLinker : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public DoorLinker door;
+
+    private void Start()
     {
-        
+        if (door == null)
+        {
+            Debug.LogWarning("Warning: Pressure plate is not linked to a door.");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        door.SetLocked(false);
     }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        door.SetLocked(true);
+    }
+
 }
