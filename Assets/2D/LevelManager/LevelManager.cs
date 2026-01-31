@@ -51,6 +51,6 @@ public class LevelManager : MonoBehaviour
 
     public void NextLevel()
     {
-        LoadLevel(CurrentLevelId++);
+        LoadLevel(++CurrentLevelId);
     }
 }
