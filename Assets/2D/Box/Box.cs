@@ -13,6 +13,7 @@ public class Box : MonoBehaviour
     readonly float _gridStep = 1f;
 
     Vector2 inputVector;
+    public bool alreadyPushed;
 
 
     void OnEnable()
@@ -20,12 +21,13 @@ public class Box : MonoBehaviour
         movePoint.transform.parent = null;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, movePoint.transform.position, movementSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, movePoint.transform.position, movementSpeed * Time.fixedDeltaTime);
 
         if (Vector3.Distance(transform.position, movePoint.transform.position) == 0)
         {
+            alreadyPushed = false;
             DoMovement();
         }
     }
@@ -59,11 +61,30 @@ public class Box : MonoBehaviour
         {
             movePoint.transform.position += direction;
         }
+        inputVector = Vector2.zero;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public bool PushBox(Vector3 direction)
     {
-        inputVector = transform.position - collision.transform.position;
-        Debug.Log(inputVector);
+        Debug.Log(direction);
+
+        if (Vector3.Distance(transform.position, movePoint.transform.position) == 0)
+        {
+            inputVector = direction;
+            Collider2D[] collidies = Physics2D.OverlapCircleAll(movePoint.transform.position + direction, 0.2f, collisionMask);
+            foreach (Collider2D collider in collidies)
+            {
+                if (collider.GetComponent<Box>() && collider.gameObject != gameObject)
+                {
+                    Vector2 boxPushDirection = collider.transform.position - transform.position;
+                    if (!alreadyPushed && boxPushDirection.magnitude == 1)
+                    {
+                        alreadyPushed = true;
+                        return collider.GetComponent<Box>().PushBox(boxPushDirection);
+                    }
+                }
+            }
+        }
+        return !Physics2D.OverlapCircle(movePoint.transform.position + direction, 0.2f, collisionMask);
     }
 }

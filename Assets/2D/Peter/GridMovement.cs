@@ -17,6 +17,7 @@ public class GridMovement : MonoBehaviour, InputSystem.I_2DPlayerActions
     private InputSystem inputSystem;
     private InputSystem._2DPlayerActions _2DPlayerActions;
     private Vector2 inputVector;
+    public bool alreadyPushed;
 
     void OnEnable()
     {
@@ -39,6 +40,7 @@ public class GridMovement : MonoBehaviour, InputSystem.I_2DPlayerActions
 
         if (Vector3.Distance(transform.position, movePoint.transform.position) == 0)
         {
+            alreadyPushed = false;
             DoMovement();
             _animator.SetBool("isMoving", true);
         }
@@ -73,6 +75,24 @@ public class GridMovement : MonoBehaviour, InputSystem.I_2DPlayerActions
 
     private void TryMove(Vector3 direction)
     {
+        Collider2D[] collidies = Physics2D.OverlapCircleAll(movePoint.transform.position + direction, 0.2f, collisionMask);
+        foreach (Collider2D collider in collidies)
+        {
+            if (collider.GetComponent<Box>() && collider.gameObject != gameObject)
+            {
+                Vector3 boxPushDirection = collider.transform.position - transform.position;
+                if (!alreadyPushed && boxPushDirection.magnitude == 1)
+                {
+                    alreadyPushed = true;
+                    if (collider.GetComponent<Box>().PushBox(boxPushDirection))
+                    {
+                        movePoint.transform.position += direction;
+                        inputVector = Vector2.zero;
+                    }
+                }
+                return;
+            }
+        }
         if (!Physics2D.OverlapCircle(movePoint.transform.position + direction, 0.2f, collisionMask))
         {
             movePoint.transform.position += direction;
