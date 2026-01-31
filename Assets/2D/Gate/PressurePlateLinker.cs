@@ -9,8 +9,8 @@ public class PressurePlateLinker : MonoBehaviour
   {
     if (doors == null) Debug.LogWarning("Warning: Pressure plate is not linked to a door.");
   }
-
-  private void OnTriggerEnter2D(Collider2D other)
+    
+  private void OnTriggerStay2D(Collider2D other)
   {
     Debug.Log("pressure plate enter");
 
