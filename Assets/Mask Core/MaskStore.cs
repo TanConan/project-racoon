@@ -19,4 +19,9 @@ public class MaskStore : ScriptableObject
         SelectedActiveMasks ^= toggleMask;
         maskChangedEvent.Invoke(SelectedActiveMasks);
     }
+
+    void OnDisable()
+    {
+        SelectedActiveMasks = ActiveMasks.NONE;
+    }
 }
