@@ -2,89 +2,50 @@ using UnityEngine;
 
 public class Box : MonoBehaviour
 {
-    [Header("Object References")]
-    public GameObject movePoint;
-    public LayerMask collisionMask;
+  [Header("Object References")]
+  public GameObject movePoint;
+  public LayerMask collisionMask;
 
+  [Header("Movement finetuning")]
+  public float movementSpeed = 5f; // Etwas höherer Wert für flüssigeres Grid-Gefühl
+  readonly float _gridStep = 1f;
 
-    [Header("Movement finetuning")]
-    public float movementSpeed = 0.5f;
+  void OnEnable()
+  {
+    movePoint.transform.parent = null;
+  }
 
-    readonly float _gridStep = 1f;
+  void Update()
+  {
+    transform.position = Vector3.MoveTowards(transform.position, movePoint.transform.position, movementSpeed * Time.deltaTime);
+  }
 
-    Vector2 inputVector;
-    public bool alreadyPushed;
-
-
-    void OnEnable()
+  public bool PushBox(Vector3 direction)
+  {
+    if (Vector3.Distance(transform.position, movePoint.transform.position) > 0.05f)
     {
-        movePoint.transform.parent = null;
+      return false;
     }
 
-    void FixedUpdate()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, movePoint.transform.position, movementSpeed * Time.fixedDeltaTime);
+    Vector3 targetPos = movePoint.transform.position + direction;
+    Collider2D hit = Physics2D.OverlapCircle(targetPos, 0.2f, collisionMask);
 
-        if (Vector3.Distance(transform.position, movePoint.transform.position) == 0)
+    if (hit != null)
+    {
+      Box nextBox = hit.GetComponent<Box>();
+      if (nextBox != null && nextBox != this)
+      {
+        if (nextBox.PushBox(direction))
         {
-            alreadyPushed = false;
-            DoMovement();
+          movePoint.transform.position += direction;
+          return true;
         }
+      }
+      return false;
     }
 
-    private void DoMovement()
-    {
-        float x = inputVector.x;
-        float y = inputVector.y;
-
-        float minDistanceToMovementPoint = 0f;
-        if (Mathf.Abs(x) > minDistanceToMovementPoint)
-        {
-            float direction = inputVector.x > 0 ? 1f : -1f;
-            TryMove(new Vector3(direction * _gridStep, 0f, 0f));
-            return;
-        }
-
-
-        if (Mathf.Abs(y) > minDistanceToMovementPoint)
-        {
-            float direction = inputVector.y > 0 ? 1f : -1f;
-            TryMove(new Vector3(0f, direction * _gridStep, 0f));
-            return;
-        }
-
-    }
-
-    private void TryMove(Vector3 direction)
-    {
-        if (!Physics2D.OverlapCircle(movePoint.transform.position + direction, 0.2f, collisionMask))
-        {
-            movePoint.transform.position += direction;
-        }
-        inputVector = Vector2.zero;
-    }
-
-    public bool PushBox(Vector3 direction)
-    {
-        Debug.Log(direction);
-
-        if (Vector3.Distance(transform.position, movePoint.transform.position) == 0)
-        {
-            inputVector = direction;
-            Collider2D[] collidies = Physics2D.OverlapCircleAll(movePoint.transform.position + direction, 0.2f, collisionMask);
-            foreach (Collider2D collider in collidies)
-            {
-                if (collider.GetComponent<Box>() && collider.gameObject != gameObject)
-                {
-                    Vector2 boxPushDirection = collider.transform.position - transform.position;
-                    if (!alreadyPushed && boxPushDirection.magnitude == 1)
-                    {
-                        alreadyPushed = true;
-                        return collider.GetComponent<Box>().PushBox(boxPushDirection);
-                    }
-                }
-            }
-        }
-        return !Physics2D.OverlapCircle(movePoint.transform.position + direction, 0.2f, collisionMask);
-    }
+    // 3. Weg ist frei (kein Hit), movePoint sofort verschieben
+    movePoint.transform.position += direction;
+    return true;
+  }
 }
