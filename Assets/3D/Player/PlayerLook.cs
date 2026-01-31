@@ -70,8 +70,8 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
     public void OnToggleMask1(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        if (!unlockedMasks.HasFlag(ActiveMasks.FIND)) return;
-        maskStore.ToggleMask(ActiveMasks.FIND);
+        if (!unlockedMasks.HasFlag(ActiveMasks.TwinMask)) return;
+        maskStore.ToggleMask(ActiveMasks.TwinMask);
     }
 
     void Awake()
@@ -81,7 +81,7 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
         _3DPlayerActions.AddCallbacks(this);
         wantedFOV = fovNormal;
         // TODO REMOVE
-        unlockedMasks = ActiveMasks.RedBlueMask | ActiveMasks.FIND;
+        unlockedMasks = ActiveMasks.RedBlueMask | ActiveMasks.TwinMask;
     }
 
     private void Update()
