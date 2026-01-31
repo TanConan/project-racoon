@@ -614,7 +614,67 @@ MonoBehaviour:
   Levels:
   - CamSize: 8.5
     Level: {fileID: 5501340381077870786, guid: 0f749d2c5df3d4d6f99733a21ccee9a3, type: 3}
-  CurrentLevelId: 0
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: 41a508cebcf941d4d82234ef7e6a8c06, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: 60f6d488ac6395b4985e4d365d9b7800, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: ec8d36d6ab42a85419770238102c06dd, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: c89752c8a65ffb443b5f0304c7b3ba81, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: b90876e9a48d7584ea38a3ce3a08bdae, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: b684552d3acc19f46acb63e95dc3ec24, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: b3eccd856fb36714bb20c88b1ff90436, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: b42d7dd86f2a634469f90c0937917b37, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: bf181bda705f5e04ebc56418efe8b428, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: b1f5fb33182aa9341bdf2a863b2a27e0, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: ec60929c1da7b4045b5f74acbe64835a, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: 915d70f695d2d7c47a344aa2a0e49899, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: eb448449e2dc875478c0859cac95b0ee, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: 2e733b04e0d48d446be84baf31a5ca66, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: b04459e1d927c8c4da3edc602c70c83e, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: 57d47f22f130e94469ee38e4076d640a, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: e21e1450f6abc2748b916b0e03b4d970, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: 23d0ca4df01128f49872fc7542566c79, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: 18505674671680e47bbf8d1ddc2f2c7c, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: 08fd4cc7ffd74f34ca11ca2f3b313a37, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: bef0adf051d20e747903b1052b1597f8, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: 915d70f695d2d7c47a344aa2a0e49899, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: 92d94ecfa9154bc47ab92d7c3e22dad3, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: b4d01efecafb2ef448820c5d70baf9c9, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: f58af8dbef7bce149a91820cd16ba759, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: dda2b8848094c2a49a06af05c853b984, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: 11a8f710dbc59124c83d7723de132083, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: 300e10b3e86bd5f44a43be0a87e4c21c, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: 0f261c57bda51044c80df4543e63cacd, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: c5455e193fd58e94b914e2a13f4f84e9, type: 3}
+  CurrentLevelId: 1
 --- !u!4 &193127226
 Transform:
   m_ObjectHideFlags: 0
