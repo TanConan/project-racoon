@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 [System.Serializable]
@@ -16,6 +17,7 @@ public class LevelManager : MonoBehaviour
     public Camera Camera2D;
     public GridMovement Player;
     public Animator resetAnimator;
+    public TMP_Text levelText;
 
     public List<LevelInformation> Levels;
 
@@ -43,6 +45,7 @@ public class LevelManager : MonoBehaviour
         _currentLevel = Instantiate(Levels[CurrentLevelId].Level, transform);
         Player.Teleport(GameObject.FindWithTag("Respawn").transform.position);
         Camera2D.orthographicSize = Levels[CurrentLevelId].CamSize;
+        levelText.text = string.Format("LEVEL {0:D2}", CurrentLevelId + 1);
     }
 
     public void ReloadLevel()
