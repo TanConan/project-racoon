@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7092606551030705184}
   - component: {fileID: 2076728836614107811}
   - component: {fileID: 3629090270603353664}
-  - component: {fileID: 5835000919598858726}
   m_Layer: 0
   m_Name: Pressureplate
   m_TagString: Untagged
@@ -153,18 +152,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &5835000919598858726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9025662401164730391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 837c37d8a25ac406c88ac0ecf14c50b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlateLinker
-  doors:
-  - {fileID: 0}
-  - {fileID: 0}
