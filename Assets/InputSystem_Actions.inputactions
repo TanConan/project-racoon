@@ -25,6 +25,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "ChangeFov",
+                    "type": "Button",
+                    "id": "89f99ec3-4992-4a1e-b9d6-3d1b353174cf",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "7db95341-e8b6-474e-af1e-e1f20806ff38",
@@ -94,6 +103,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "371b7390-3b4f-429c-81d7-671640de846b",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeFov",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
