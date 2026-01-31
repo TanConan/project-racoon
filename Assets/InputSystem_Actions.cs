@@ -118,6 +118,24 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleMask0"",
+                    ""type"": ""Button"",
+                    ""id"": ""67894df9-15b3-42cb-90a9-d104c3252e41"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleMask1"",
+                    ""type"": ""Button"",
+                    ""id"": ""daad1440-3da4-4b9a-b364-2f377e0ffba9"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -173,6 +191,28 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""91a1710b-e920-41ef-be31-5e708ba25c53"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleMask0"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2ca96750-c1ac-4097-b6a6-b34b3ee38809"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleMask1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -332,33 +372,6 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             ""id"": ""72e101d4-7a6d-4b11-b5e1-8c6a3e0acc7f"",
             ""actions"": [
                 {
-                    ""name"": ""Mask0"",
-                    ""type"": ""Button"",
-                    ""id"": ""21f2aa33-e8a3-4779-8eb2-fd32971f2d59"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Mask1"",
-                    ""type"": ""Button"",
-                    ""id"": ""ff9ed0e0-3009-46a9-8145-f8cc7b885e3a"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Mask2"",
-                    ""type"": ""Button"",
-                    ""id"": ""e188fc77-c898-45b7-8e25-dc912d3e98ff"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Reset"",
                     ""type"": ""Button"",
                     ""id"": ""eb0ae215-d364-4484-bbee-36567c031ddd"",
@@ -369,39 +382,6 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""0a55c0ae-68ef-477e-8228-2fce8cfda699"",
-                    ""path"": ""<Keyboard>/1"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Mask0"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d646f695-14ae-4e33-b23a-fb91b3fa56e5"",
-                    ""path"": ""<Keyboard>/2"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Mask1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7af2067b-7374-4b61-b765-14537258522c"",
-                    ""path"": ""<Keyboard>/3"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Mask2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""f9b60a59-7deb-42c9-9201-a45cc327a39d"",
@@ -878,14 +858,13 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         m__3DPlayer_Look = m__3DPlayer.FindAction("Look", throwIfNotFound: true);
         m__3DPlayer_Interact = m__3DPlayer.FindAction("Interact", throwIfNotFound: true);
         m__3DPlayer_Pause = m__3DPlayer.FindAction("Pause", throwIfNotFound: true);
+        m__3DPlayer_ToggleMask0 = m__3DPlayer.FindAction("ToggleMask0", throwIfNotFound: true);
+        m__3DPlayer_ToggleMask1 = m__3DPlayer.FindAction("ToggleMask1", throwIfNotFound: true);
         // 2DPlayer
         m__2DPlayer = asset.FindActionMap("2DPlayer", throwIfNotFound: true);
         m__2DPlayer_Move = m__2DPlayer.FindAction("Move", throwIfNotFound: true);
         // Debug
         m_Debug = asset.FindActionMap("Debug", throwIfNotFound: true);
-        m_Debug_Mask0 = m_Debug.FindAction("Mask0", throwIfNotFound: true);
-        m_Debug_Mask1 = m_Debug.FindAction("Mask1", throwIfNotFound: true);
-        m_Debug_Mask2 = m_Debug.FindAction("Mask2", throwIfNotFound: true);
         m_Debug_Reset = m_Debug.FindAction("Reset", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
@@ -980,6 +959,8 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m__3DPlayer_Look;
     private readonly InputAction m__3DPlayer_Interact;
     private readonly InputAction m__3DPlayer_Pause;
+    private readonly InputAction m__3DPlayer_ToggleMask0;
+    private readonly InputAction m__3DPlayer_ToggleMask1;
     /// <summary>
     /// Provides access to input actions defined in input action map "3DPlayer".
     /// </summary>
@@ -1003,6 +984,14 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "_3DPlayer/Pause".
         /// </summary>
         public InputAction @Pause => m_Wrapper.m__3DPlayer_Pause;
+        /// <summary>
+        /// Provides access to the underlying input action "_3DPlayer/ToggleMask0".
+        /// </summary>
+        public InputAction @ToggleMask0 => m_Wrapper.m__3DPlayer_ToggleMask0;
+        /// <summary>
+        /// Provides access to the underlying input action "_3DPlayer/ToggleMask1".
+        /// </summary>
+        public InputAction @ToggleMask1 => m_Wrapper.m__3DPlayer_ToggleMask1;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1038,6 +1027,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @ToggleMask0.started += instance.OnToggleMask0;
+            @ToggleMask0.performed += instance.OnToggleMask0;
+            @ToggleMask0.canceled += instance.OnToggleMask0;
+            @ToggleMask1.started += instance.OnToggleMask1;
+            @ToggleMask1.performed += instance.OnToggleMask1;
+            @ToggleMask1.canceled += instance.OnToggleMask1;
         }
 
         /// <summary>
@@ -1058,6 +1053,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @ToggleMask0.started -= instance.OnToggleMask0;
+            @ToggleMask0.performed -= instance.OnToggleMask0;
+            @ToggleMask0.canceled -= instance.OnToggleMask0;
+            @ToggleMask1.started -= instance.OnToggleMask1;
+            @ToggleMask1.performed -= instance.OnToggleMask1;
+            @ToggleMask1.canceled -= instance.OnToggleMask1;
         }
 
         /// <summary>
@@ -1191,9 +1192,6 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     // Debug
     private readonly InputActionMap m_Debug;
     private List<IDebugActions> m_DebugActionsCallbackInterfaces = new List<IDebugActions>();
-    private readonly InputAction m_Debug_Mask0;
-    private readonly InputAction m_Debug_Mask1;
-    private readonly InputAction m_Debug_Mask2;
     private readonly InputAction m_Debug_Reset;
     /// <summary>
     /// Provides access to input actions defined in input action map "Debug".
@@ -1206,18 +1204,6 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Construct a new instance of the input action map wrapper class.
         /// </summary>
         public DebugActions(@InputSystem wrapper) { m_Wrapper = wrapper; }
-        /// <summary>
-        /// Provides access to the underlying input action "Debug/Mask0".
-        /// </summary>
-        public InputAction @Mask0 => m_Wrapper.m_Debug_Mask0;
-        /// <summary>
-        /// Provides access to the underlying input action "Debug/Mask1".
-        /// </summary>
-        public InputAction @Mask1 => m_Wrapper.m_Debug_Mask1;
-        /// <summary>
-        /// Provides access to the underlying input action "Debug/Mask2".
-        /// </summary>
-        public InputAction @Mask2 => m_Wrapper.m_Debug_Mask2;
         /// <summary>
         /// Provides access to the underlying input action "Debug/Reset".
         /// </summary>
@@ -1248,15 +1234,6 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_DebugActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_DebugActionsCallbackInterfaces.Add(instance);
-            @Mask0.started += instance.OnMask0;
-            @Mask0.performed += instance.OnMask0;
-            @Mask0.canceled += instance.OnMask0;
-            @Mask1.started += instance.OnMask1;
-            @Mask1.performed += instance.OnMask1;
-            @Mask1.canceled += instance.OnMask1;
-            @Mask2.started += instance.OnMask2;
-            @Mask2.performed += instance.OnMask2;
-            @Mask2.canceled += instance.OnMask2;
             @Reset.started += instance.OnReset;
             @Reset.performed += instance.OnReset;
             @Reset.canceled += instance.OnReset;
@@ -1271,15 +1248,6 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="DebugActions" />
         private void UnregisterCallbacks(IDebugActions instance)
         {
-            @Mask0.started -= instance.OnMask0;
-            @Mask0.performed -= instance.OnMask0;
-            @Mask0.canceled -= instance.OnMask0;
-            @Mask1.started -= instance.OnMask1;
-            @Mask1.performed -= instance.OnMask1;
-            @Mask1.canceled -= instance.OnMask1;
-            @Mask2.started -= instance.OnMask2;
-            @Mask2.performed -= instance.OnMask2;
-            @Mask2.canceled -= instance.OnMask2;
             @Reset.started -= instance.OnReset;
             @Reset.performed -= instance.OnReset;
             @Reset.canceled -= instance.OnReset;
@@ -1549,6 +1517,20 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPause(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ToggleMask0" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnToggleMask0(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ToggleMask1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnToggleMask1(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "2DPlayer" which allows adding and removing callbacks.
@@ -1572,27 +1554,6 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     /// <seealso cref="DebugActions.RemoveCallbacks(IDebugActions)" />
     public interface IDebugActions
     {
-        /// <summary>
-        /// Method invoked when associated input action "Mask0" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnMask0(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Mask1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnMask1(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Mask2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnMask2(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Reset" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

@@ -10,6 +10,9 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
     float verticalRotation = 0f;
     float horizontalRotation = 0f;
 
+    public MaskStore maskStore;
+    ActiveMasks unlockedMasks;
+
     [Header("Look Settings")]
     [SerializeField]
     private float sensitivity = 0.1f;
@@ -58,6 +61,20 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
         Cursor.lockState = CursorLockMode.None;
     }
 
+    public void OnToggleMask0(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        if (!unlockedMasks.HasFlag(ActiveMasks.RedBlueMask)) return;
+        maskStore.ToggleMask(ActiveMasks.RedBlueMask);
+    }
+
+    public void OnToggleMask1(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        if (!unlockedMasks.HasFlag(ActiveMasks.FIND)) return;
+        maskStore.ToggleMask(ActiveMasks.FIND);
+    }
+
     void Awake()
     {
         inputSystem = new();
@@ -91,6 +108,11 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
         transform.localEulerAngles = currentRotation;
 
         FOVChange();
+    }
+
+    public void UnlockMask(ActiveMasks newMask)
+    {
+        unlockedMasks |= newMask;
     }
 
     private void FOVChange()
