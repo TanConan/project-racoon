@@ -20,7 +20,13 @@ public class PressurePlateLinker : MonoBehaviour
         _count += 1;
         if (_count == 1)
         {
-            foreach (var door in doors) door.IncreaseCurrentButtons();
+            foreach (var door in doors)
+            {
+                if (door)
+                {
+                    door.IncreaseCurrentButtons();
+                }
+            }
         }
     }
 
@@ -31,7 +37,13 @@ public class PressurePlateLinker : MonoBehaviour
         if (_count == 0)
         {
             Debug.Log("pressure plate empty - locking doors");
-            foreach (var door in doors) door.DecreaseCurrentButtons();
+            foreach (var door in doors)
+            {
+                if (door)
+                {
+                    door.DecreaseCurrentButtons();
+                }
+            }
         }
     }
 
