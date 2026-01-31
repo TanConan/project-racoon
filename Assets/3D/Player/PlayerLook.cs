@@ -10,13 +10,27 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
     float verticalRotation = 0f;
     float horizontalRotation = 0f;
 
-    [Header("Settings")]
+    [Header("Look Settings")]
     [SerializeField]
     private float sensitivity = 0.1f;
     [SerializeField]
     private float yLookLimit = 50f;
     [SerializeField]
     private float xLookLimit = 30f;
+
+    [Header("Zoom Settings")]
+    [SerializeField]
+    private float fovChangeSpeed;
+    [SerializeField]
+    private float fovCursorSpeedSubtraction;
+    [SerializeField]
+    private float fovChangeMinAngle;
+    [SerializeField]
+    private float fovChangeMaxAngle;
+    [SerializeField]
+    private float fovNormal;
+    [SerializeField]
+    private float fovScreen;
 
     public void OnInteract(InputAction.CallbackContext context)
     {
@@ -75,5 +89,26 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
         currentRotation.x = verticalRotation;
         currentRotation.y = horizontalRotation;
         transform.localEulerAngles = currentRotation;
+
+        FOVChange();
+    }
+
+    private void FOVChange()
+    {
+        float lookWeight = GetForwardWeight(Vector3.forward, Camera.main.transform.forward, fovChangeMinAngle, fovChangeMaxAngle);
+        float speedWeight = 1f - Mathf.InverseLerp(3f, 15f, deltaPointer.magnitude * fovCursorSpeedSubtraction * Time.deltaTime);
+        float weight = lookWeight * 0.5f + speedWeight * 0.5f;
+        float wantedFOV = Mathf.Lerp(fovNormal, fovScreen, weight);
+        Camera.main.fieldOfView = Mathf.MoveTowards(Camera.main.fieldOfView, wantedFOV, fovChangeSpeed * Time.deltaTime);
+    }
+
+    private static float GetForwardWeight(Vector3 forward, Vector3 direction, float angleMin, float angleMax)
+    {
+        float angle = Vector3.Angle(direction, forward);
+
+        if (angle <= angleMin) return 1f;
+        if (angle >= angleMax) return 0f;
+
+        return 1f - Mathf.InverseLerp(angleMin, angleMax, angle);
     }
 }
