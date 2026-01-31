@@ -1,13 +1,23 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class RedBlueWall : MaskListener
 {
 
     public bool isRedwall;
-    
+    private Collider2D _collider;
+    private TilemapRenderer _tilemapRenderer;
+
+    public override void Awake()
+    {
+        base.Awake();
+        _collider = GetComponent<Collider2D>();
+        _tilemapRenderer = GetComponent<TilemapRenderer>();
+    }
+
     void Start()
     {
-        FlipWallStatus(isRedwall ? ActiveMasks.RedBlueMask : ActiveMasks.NONE);
+        FlipWallStatus(ActiveMasks.NONE);
     }
 
     public override void MaskChange(ActiveMasks activeMasks)
@@ -17,6 +27,7 @@ public class RedBlueWall : MaskListener
 
     private void FlipWallStatus(ActiveMasks activeMasks)
     {
-        gameObject.SetActive(activeMasks.HasFlag(ActiveMasks.RedBlueMask) ?  isRedwall : !isRedwall);
+        _collider.enabled = activeMasks.HasFlag(ActiveMasks.RedBlueMask) ? isRedwall : !isRedwall;
+        _tilemapRenderer.enabled =  activeMasks.HasFlag(ActiveMasks.RedBlueMask) ? isRedwall : !isRedwall;
     }
 }
