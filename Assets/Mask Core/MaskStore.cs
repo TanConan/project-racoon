@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "Mask", menuName = "Scriptable Objects/Mask")]
-public class Mask : ScriptableObject
+public class MaskStore : ScriptableObject
 {
   public ActiveMasks SelectedActiveMasks { get; private set; }
 

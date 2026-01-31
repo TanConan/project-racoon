@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerDebug : MonoBehaviour, InputSystem.IDebugActions
 {
-  public Mask mask;
+  public MaskStore maskStore;
 
   private InputSystem inputSystem;
   private InputSystem.DebugActions debugActions;
@@ -19,19 +19,19 @@ public class PlayerDebug : MonoBehaviour, InputSystem.IDebugActions
   public void OnMask0(InputAction.CallbackContext context)
   {
     if (!context.performed) { return; }
-    mask.ChangeMask(ActiveMasks.NONE);
+    maskStore.ChangeMask(ActiveMasks.NONE);
   }
 
   public void OnMask1(InputAction.CallbackContext context)
   {
     if (!context.performed) { return; }
-    mask.ChangeMask(mask.SelectedActiveMasks ^ ActiveMasks.RedBlueMask);
+    maskStore.ChangeMask(maskStore.SelectedActiveMasks ^ ActiveMasks.RedBlueMask);
   }
 
   public void OnMask2(InputAction.CallbackContext context)
   {
     if (!context.performed) { return; }
-    mask.ChangeMask(mask.SelectedActiveMasks ^ ActiveMasks.FIND);
+    maskStore.ChangeMask(maskStore.SelectedActiveMasks ^ ActiveMasks.FIND);
   }
 
 }

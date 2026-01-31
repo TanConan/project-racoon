@@ -20,8 +20,8 @@ public class FaceMask : MaskListener
 
   public void OnToggleMask()
   {
-    ActiveMasks currentMasks = mask.SelectedActiveMasks;
+    ActiveMasks currentMasks = MaskStore.SelectedActiveMasks;
     currentMasks ^= thisMask;
-    mask.ChangeMask(currentMasks);
+    MaskStore.ChangeMask(currentMasks);
   }
 }

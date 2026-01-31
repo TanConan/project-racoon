@@ -2,24 +2,24 @@ using UnityEngine;
 
 public abstract class MaskListener : MonoBehaviour
 {
-  protected static Mask mask;
+  protected static MaskStore MaskStore;
 
   public virtual void Awake()
   {
-    if (mask == null)
+    if (MaskStore == null)
     {
-      mask = Resources.Load<Mask>("Mask");
+      MaskStore = Resources.Load<MaskStore>("MaskStore");
     }
   }
 
   void OnEnable()
   {
-    mask.maskChangedEvent.AddListener(MaskChange);
+    MaskStore.maskChangedEvent.AddListener(MaskChange);
   }
 
   void OnDisable()
   {
-    mask.maskChangedEvent.RemoveListener(MaskChange);
+    MaskStore.maskChangedEvent.RemoveListener(MaskChange);
   }
 
   public abstract void MaskChange(ActiveMasks activeMasks);

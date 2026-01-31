@@ -17,7 +17,7 @@ public class RedBlueWall : MaskListener
 
     void Start()
     {
-        FlipWallStatus(ActiveMasks.NONE);
+        FlipWallStatus(MaskStore.SelectedActiveMasks);
     }
 
     public override void MaskChange(ActiveMasks activeMasks)
