@@ -33,11 +33,12 @@ public class LevelManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ReloadLevel();
+        StartCoroutine(LoadLevel());
     }
 
     public IEnumerator LoadLevel()
     {
+        yield return new WaitForSeconds(0.2f);
         Destroy(_currentLevel);
         yield return new WaitForEndOfFrame();
         _currentLevel = Instantiate(Levels[CurrentLevelId].Level, transform);

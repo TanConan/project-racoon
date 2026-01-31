@@ -48,6 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorLinker
   lockedSprite: {fileID: -593292354, guid: 24f88288eb8a6fc4ea6e3f30edd626ed, type: 3}
   unlockedSprite: {fileID: -32441603, guid: 24f88288eb8a6fc4ea6e3f30edd626ed, type: 3}
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 384
 --- !u!212 &4765483918186331144
 SpriteRenderer:
   serializedVersion: 2
