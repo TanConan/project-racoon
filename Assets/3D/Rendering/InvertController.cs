@@ -15,7 +15,16 @@ public class InvertController : MaskListener
     private Coroutine fadeCoroutine;
     private float currentIntensity = 0f;
 
-    public void SetNegative(bool enabled)
+  public void OnDisable()
+  {
+    currentIntensity = 0f;
+
+    // Force reset the shader values
+    if (invertMaterial != null) invertMaterial.SetFloat("_InvertIntensity", 0f);
+    if (crtMaterial != null) crtMaterial.SetFloat("_InvertIntensity", 0f);
+  }
+
+  public void SetNegative(bool enabled)
     {
         if (rendererData == null || invertMaterial == null) return;
 

@@ -2,24 +2,17 @@ using UnityEngine;
 
 public class TwinMask : MaskListener
 {
-  public static bool TwinMaskOn;
-
-
-  public override void MaskChange(ActiveMasks activeMasks)
-  {
-    if (activeMasks.HasFlag(ActiveMasks.TwinMask) == TwinMaskOn) return;
-
-    TwinMaskOn = !TwinMaskOn;
-    // Twin mask changed
-    Debug.Log("twin mask on: " + TwinMaskOn);
-    var twin = GameObject.FindWithTag("Twin");
-    if (twin == null)
+    public override void MaskChange(ActiveMasks activeMasks)
     {
-      Debug.Log("twin not found");
-      return;
+        TwinMaskLogic();
     }
 
-    twin.GetComponent<GridMovement>().isMovementActive = TwinMaskOn;
-    LevelManager.Instance.Player.GetComponent<GridMovement>().isMovementActive = !TwinMaskOn;
-  }
+    public void TwinMaskLogic()
+    {
+        var twin = GameObject.FindWithTag("Twin");
+        if (twin == null) return;
+
+        twin.GetComponent<GridMovement>().isMovementActive = MaskStore.SelectedActiveMasks.HasFlag(ActiveMasks.TwinMask);
+        LevelManager.Instance.Player.GetComponent<GridMovement>().isMovementActive = !MaskStore.SelectedActiveMasks.HasFlag(ActiveMasks.TwinMask);
+    }
 }
