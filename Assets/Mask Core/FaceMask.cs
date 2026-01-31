@@ -4,6 +4,7 @@ using UnityEngine;
 public class FaceMask : MonoBehaviour
 {
     public ActiveMasks thisMask;
+    public TutorialText tutorialText;
     public float speed;
     public float rotateSpeed;
     public float collectDistance;
@@ -20,7 +21,10 @@ public class FaceMask : MonoBehaviour
 
         if (Vector3.Distance(Camera.main.transform.position, transform.position) <= collectDistance)
         {
-            FindFirstObjectByType<PlayerLook>().UnlockMask(thisMask);
+            PlayerLook player = FindFirstObjectByType<PlayerLook>();
+            player.UnlockMask(thisMask);
+            player.ToggleMask0();
+            Tutorial.Instance.Show(tutorialText);
             Destroy(gameObject);
         }
     }

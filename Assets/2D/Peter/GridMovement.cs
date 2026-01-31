@@ -34,6 +34,14 @@ public class GridMovement : MonoBehaviour, InputSystem.I_2DPlayerActions
         _inputVector = context.ReadValue<Vector2>();
     }
 
+    public void OnReset(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+
+        LevelManager.Instance.ReloadLevel();
+        // Jonas hier
+    }
+
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, movePoint.transform.position, movementSpeed * Time.deltaTime);

@@ -164,6 +164,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Reset",
+                    "type": "Button",
+                    "id": "1c344a6b-6d35-4454-b683-bf02beaf0e96",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -298,27 +307,10 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Debug",
-            "id": "72e101d4-7a6d-4b11-b5e1-8c6a3e0acc7f",
-            "actions": [
-                {
-                    "name": "Reset",
-                    "type": "Button",
-                    "id": "eb0ae215-d364-4484-bbee-36567c031ddd",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "f9b60a59-7deb-42c9-9201-a45cc327a39d",
+                    "id": "547b5fc6-2d45-44c1-adf7-a937ee2a9867",
                     "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
