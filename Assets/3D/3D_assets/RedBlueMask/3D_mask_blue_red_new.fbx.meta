@@ -3,7 +3,27 @@ guid: 06525251550a72945864d87f28ec7083
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: red_blue_mask_sub_mask_red_blue_m_BaseColor
+    second: {fileID: 2800000, guid: a9901011ab09d9044badac483f9b2ad8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: red_blue_mask_sub_mask_red_blue_m_Metalness
+    second: {fileID: 2800000, guid: 5f3649d36772af246bc8370703541c28, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: red_blue_mask_sub_mask_red_blue_m_Normal
+    second: {fileID: 2800000, guid: 6dc413dd3941f7e49bebbc1fc60546ad, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: red_blue_mask_sub_mask_red_blue_m_Roughness
+    second: {fileID: 2800000, guid: 4570d4ccc6dc8044c8e83443f094b2ad, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
