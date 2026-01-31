@@ -65,11 +65,6 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
     {
         if (!context.performed) return;
         if (!unlockedMasks.HasFlag(ActiveMasks.RedBlueMask)) return;
-        ToggleMask0();
-    }
-
-    public void ToggleMask0()
-    {
         maskStore.ToggleMask(ActiveMasks.RedBlueMask);
     }
 
@@ -77,11 +72,6 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
     {
         if (!context.performed) return;
         if (!unlockedMasks.HasFlag(ActiveMasks.TwinMask)) return;
-        maskStore.ToggleMask(ActiveMasks.TwinMask);
-    }
-
-    public void ToggleMask1()
-    {
         maskStore.ToggleMask(ActiveMasks.TwinMask);
     }
 
