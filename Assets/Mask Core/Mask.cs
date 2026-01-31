@@ -4,13 +4,13 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName = "Mask", menuName = "Scriptable Objects/Mask")]
 public class Mask : ScriptableObject
 {
-  public Masks selected_masks { get; private set; }
+  public ActiveMasks SelectedActiveMasks { get; private set; }
 
-  public UnityEvent<Masks> maskChangedEvent = new();
+  public UnityEvent<ActiveMasks> maskChangedEvent = new();
 
-  public void ChangeMask(Masks mask)
+  public void ChangeMask(ActiveMasks activeMasks)
   {
-    selected_masks = mask;
-    maskChangedEvent.Invoke(selected_masks);
+    SelectedActiveMasks = activeMasks;
+    maskChangedEvent.Invoke(SelectedActiveMasks);
   }
 }

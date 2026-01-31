@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(MeshRenderer))]
 public class FaceMask : MaskListener
 {
-  public Masks thisMask;
+  [FormerlySerializedAs("thisMaskName")] [FormerlySerializedAs("thisMask")] public ActiveMasks thisActiveMasks;
 
   private MeshRenderer _meshRenderer;
 
@@ -13,15 +14,15 @@ public class FaceMask : MaskListener
     _meshRenderer = GetComponent<MeshRenderer>();
   }
 
-  public override void MaskChange(Masks mask)
+  public override void MaskChange(ActiveMasks activeMasks)
   {
-    _meshRenderer.enabled = (mask & thisMask) == thisMask;
+    _meshRenderer.enabled = (activeMasks & thisActiveMasks) == thisActiveMasks;
   }
 
   public void OnToggleMask()
   {
-    Masks currentMasks = mask.selected_masks;
-    currentMasks ^= thisMask;
-    mask.ChangeMask(currentMasks);
+    ActiveMasks currentActiveMasks = mask.SelectedActiveMasks;
+    currentActiveMasks ^= thisActiveMasks;
+    mask.ChangeMask(currentActiveMasks);
   }
 }

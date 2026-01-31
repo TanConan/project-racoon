@@ -4,9 +4,9 @@ public class CubeTest : MaskListener
 {
     public MeshRenderer meshRenderer;
 
-    public override void MaskChange(Masks mask)
+    public override void MaskChange(ActiveMasks activeMasks)
     {
-        meshRenderer.enabled = !mask.HasFlag(Masks.DISAPPEAR);
+        meshRenderer.enabled = !activeMasks.HasFlag(ActiveMasks.RedBlueMask);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

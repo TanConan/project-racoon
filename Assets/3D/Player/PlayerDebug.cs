@@ -18,17 +18,17 @@ public class PlayerDebug : MonoBehaviour, InputSystem.IDebugActions
 
     public void OnMask0(InputAction.CallbackContext context)
     {
-        mask.ChangeMask(Masks.NONE);
+        mask.ChangeMask(ActiveMasks.NONE);
     }
 
     public void OnMask1(InputAction.CallbackContext context)
     {
-        mask.ChangeMask(mask.selected_masks ^ Masks.DISAPPEAR);
+        mask.ChangeMask(mask.SelectedActiveMasks ^ ActiveMasks.RedBlueMask);
     }
 
     public void OnMask2(InputAction.CallbackContext context)
     {
-        mask.ChangeMask(mask.selected_masks ^ Masks.FIND);
+        mask.ChangeMask(mask.SelectedActiveMasks ^ ActiveMasks.FIND);
     }
 
 }

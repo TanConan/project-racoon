@@ -23,5 +23,5 @@ public abstract class MaskListener : MonoBehaviour
     mask.maskChangedEvent.RemoveListener(MaskChange);
   }
 
-  public abstract void MaskChange(Masks mask);
+  public abstract void MaskChange(ActiveMasks activeMasks);
 }
