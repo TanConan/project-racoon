@@ -1821,6 +1821,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1675608436306670765, guid: 716c55d04ecce48ddbb0479d7b68c0ea, type: 3}
   m_PrefabInstance: {fileID: 958082910263264882}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4295141703173809693 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3949836969742786671, guid: 716c55d04ecce48ddbb0479d7b68c0ea, type: 3}
+  m_PrefabInstance: {fileID: 958082910263264882}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d2cc4f65de44e26834465bcdb21a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorLinker
 --- !u!1001 &1487346181149256302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1935,6 +1946,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7092606551030705184, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: doors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092606551030705184, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: 'doors.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4295141703173809693}
     - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_Name
       value: Pressureplate (1)
@@ -2253,6 +2272,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7092606551030705184, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: doors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092606551030705184, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: 'doors.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8063936268820346670}
     - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_Name
       value: Pressureplate
@@ -2453,6 +2480,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1675608436306670765, guid: 716c55d04ecce48ddbb0479d7b68c0ea, type: 3}
   m_PrefabInstance: {fileID: 6429020977011988289}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8063936268820346670 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3949836969742786671, guid: 716c55d04ecce48ddbb0479d7b68c0ea, type: 3}
+  m_PrefabInstance: {fileID: 6429020977011988289}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d2cc4f65de44e26834465bcdb21a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorLinker
 --- !u!1001 &6570815848254196849
 PrefabInstance:
   m_ObjectHideFlags: 0
