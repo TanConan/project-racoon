@@ -4,6 +4,7 @@ public class TwinMask : MaskListener
 {
   public static bool TwinMaskOn;
 
+
   public override void MaskChange(ActiveMasks activeMasks)
   {
     if (activeMasks.HasFlag(ActiveMasks.TwinMask) == TwinMaskOn) return;
@@ -18,9 +19,7 @@ public class TwinMask : MaskListener
       return;
     }
 
-    var oldPlayerPos = LevelManager.Instance.Player.transform.position;
-
-    LevelManager.Instance.Player.GetComponent<GridMovement>().Teleport(twin.transform.position);
-    twin.transform.position = oldPlayerPos;
+    twin.GetComponent<GridMovement>().isMovementActive = TwinMaskOn;
+    LevelManager.Instance.Player.GetComponent<GridMovement>().isMovementActive = !TwinMaskOn;
   }
 }
