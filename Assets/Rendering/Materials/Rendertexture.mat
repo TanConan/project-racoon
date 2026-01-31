@@ -47,7 +47,7 @@ Material:
     - _Brightness: 1.5
     - _Curvature: 0.5
     - _ScanlineCount: 250
-    - _ScanlineIntensity: 0.85
+    - _ScanlineIntensity: 0.4
     - _VignetteWidth: 0.53
     - _Zoom: 1
     m_Colors: []
