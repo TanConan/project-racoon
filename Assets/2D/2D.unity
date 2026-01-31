@@ -621,7 +621,7 @@ MonoBehaviour:
     Level: {fileID: 5501340381077870786, guid: 59ab93a6fb940994d9b018a2b6b6c8cd, type: 3}
   - CamSize: 8
     Level: {fileID: 5501340381077870786, guid: 3bd505f56ab476f4d9c335e0edd2913b, type: 3}
-  - CamSize: 8
+  - CamSize: 9
     Level: {fileID: 5501340381077870786, guid: b1f5fb33182aa9341bdf2a863b2a27e0, type: 3}
   - CamSize: 8
     Level: {fileID: 5501340381077870786, guid: 11a8532a3b9e8b1488a0f4e8ee4996dc, type: 3}
