@@ -11,7 +11,7 @@ public class GridMovement : MonoBehaviour, InputSystem.I_2DPlayerActions
     [Header("Movement finetuning")]
     public float movementSpeed = 0.5f;
 
-    readonly float _gridStep = 0.5f;
+    readonly float _gridStep = 1f;
     Animator _animator;
 
     private InputSystem inputSystem;
