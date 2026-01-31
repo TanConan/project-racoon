@@ -86,12 +86,17 @@ Shader "Custom/CRT_Screen"
                 // We distort R and B coordinates slightly based on distance from center
                 float2 center = float2(0.5, 0.5);
                 float dist = distance(curvedUV, center);
-                float split = _Abberation * 0.005 * dist; // More split at edges
+                float split = _Abberation * 0.005 * dist;
 
-                float r = tex2D(_BlitTexture, float2(curvedUV.x + split, curvedUV.y)).r;
-                float g = tex2D(_BlitTexture, curvedUV).g;
-                float b = tex2D(_BlitTexture, float2(curvedUV.x - split, curvedUV.y)).b;
-                
+                // Calculate shifted UVs
+                float2 uvR = float2(curvedUV.x + split, curvedUV.y);
+                float2 uvB = float2(curvedUV.x - split, curvedUV.y);
+
+                // Sample with edge check: if the shifted UV is outside 0-1, return black for that channel
+                float r = (uvR.x < 0.0 || uvR.x > 1.0) ? 0.0 : tex2D(_BlitTexture, uvR).r;
+                float g = tex2D(_BlitTexture, curvedUV).g; // Green is centered, usually safe
+                float b = (uvB.x < 0.0 || uvB.x > 1.0) ? 0.0 : tex2D(_BlitTexture, uvB).b;
+
                 float3 col = float3(r, g, b);
 
                 // --- NEW INVERSION LOGIC ---

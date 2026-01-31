@@ -6,6 +6,9 @@ public class DoorLinker : MonoBehaviour
     public Sprite unlockedSprite;
     public LayerMask collisionMask;
 
+    public int numberOfRequiredPlates = 1;
+    public int currentButtons;
+
     private Collider2D _collider;
     private SpriteRenderer _spriteRenderer;
 
@@ -21,6 +24,26 @@ public class DoorLinker : MonoBehaviour
     private void Update()
     {
         if (closeASAP)
+        {
+            SetLocked(true);
+        }
+    }
+
+    public void IncreaseCurrentButtons()
+    {
+        currentButtons++;
+
+        if (currentButtons >= numberOfRequiredPlates)
+        {
+            SetLocked(false);
+        }
+    }
+
+    public void DecreaseCurrentButtons()
+    {
+        currentButtons--;
+
+        if (currentButtons < numberOfRequiredPlates)
         {
             SetLocked(true);
         }
