@@ -663,7 +663,7 @@ MonoBehaviour:
     Level: {fileID: 5501340381077870786, guid: 0f261c57bda51044c80df4543e63cacd, type: 3}
   - CamSize: 8
     Level: {fileID: 5501340381077870786, guid: c5455e193fd58e94b914e2a13f4f84e9, type: 3}
-  CurrentLevelId: 6
+  CurrentLevelId: 10
 --- !u!4 &193127226
 Transform:
   m_ObjectHideFlags: 0
