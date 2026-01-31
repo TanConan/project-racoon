@@ -753,7 +753,7 @@ MonoBehaviour:
     Level: {fileID: 5501340381077870786, guid: 0f261c57bda51044c80df4543e63cacd, type: 3}
   - CamSize: 8
     Level: {fileID: 5501340381077870786, guid: c5455e193fd58e94b914e2a13f4f84e9, type: 3}
-  CurrentLevelId: 5
+  CurrentLevelId: 0
 --- !u!4 &193127226
 Transform:
   m_ObjectHideFlags: 0
@@ -1649,7 +1649,7 @@ Transform:
   m_GameObject: {fileID: 1474072746}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
