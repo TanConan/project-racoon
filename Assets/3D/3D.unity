@@ -644,7 +644,7 @@ MonoBehaviour:
   sensitivity: 0.1
   yLookLimit: 75
   xLookLimit: 170
-  fovChangeSpeed: 20
+  fovChangeSpeed: 15
   fovNormal: 60
   fovScreen: 40
   fovCurve:
