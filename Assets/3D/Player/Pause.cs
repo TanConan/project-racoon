@@ -40,6 +40,21 @@ public class Pause : MonoBehaviour, InputSystem.IUIActions
         if (!context.performed) return;
     }
 
+    public void UIContinue()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void UISettings()
+    {
+
+    }
+
+    public void UIQuit()
+    {
+        Application.Quit();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

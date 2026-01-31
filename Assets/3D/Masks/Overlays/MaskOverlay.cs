@@ -46,7 +46,7 @@ public class MaskOverlay : MaskListener
     {
         Color color = crosshair.color;
         float wantedAlpha = GetForwardWeight(Vector3.forward, Camera.main.transform.forward, 25f, 35f);
-        color.a = Mathf.MoveTowards(color.a, wantedAlpha, 2f * Time.deltaTime);
+        color.a = Cursor.lockState == CursorLockMode.Locked ? Mathf.MoveTowards(color.a, wantedAlpha, 2f * Time.deltaTime) : 0f;
         crosshair.color = color;
     }
 
