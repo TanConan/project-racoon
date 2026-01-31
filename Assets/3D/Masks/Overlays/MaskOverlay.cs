@@ -16,11 +16,13 @@ public class MaskOverlay : MaskListener
 
     [Header("Overlays")]
     public List<RectTransform> RedBlueMaskOverlays;
+    public List<RectTransform> TwinMaskOverlays;
     public Image crosshair;
 
     public override void MaskChange(ActiveMasks activeMasks)
     {
         RedBlueMaskOverlays.ForEach(o => o.gameObject.SetActive(activeMasks.HasFlag(ActiveMasks.RedBlueMask)));
+        TwinMaskOverlays.ForEach(o => o.gameObject.SetActive(activeMasks.HasFlag(ActiveMasks.TwinMask)));
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

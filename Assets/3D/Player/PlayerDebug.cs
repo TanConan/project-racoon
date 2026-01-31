@@ -31,7 +31,7 @@ public class PlayerDebug : MonoBehaviour, InputSystem.IDebugActions
     public void OnMask2(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        maskStore.ChangeMask(maskStore.SelectedActiveMasks ^ ActiveMasks.FIND);
+        maskStore.ChangeMask(maskStore.SelectedActiveMasks ^ ActiveMasks.TwinMask);
     }
 
     public void OnReset(InputAction.CallbackContext context)
