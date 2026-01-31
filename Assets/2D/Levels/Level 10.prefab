@@ -448,7 +448,7 @@ Transform:
   m_GameObject: {fileID: 3268200710626478298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14, y: 1, z: 0}
+  m_LocalPosition: {x: 14.000001, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -553,6 +553,8 @@ GameObject:
   - component: {fileID: 1312037748479231546}
   - component: {fileID: 3883222665877211285}
   - component: {fileID: 508188076407031633}
+  - component: {fileID: 6823947089133250442}
+  - component: {fileID: 7663258607366608382}
   m_Layer: 8
   m_Name: wall
   m_TagString: Untagged
@@ -1325,6 +1327,71 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
+--- !u!19719996 &6823947089133250442
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531396641543454431}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
+--- !u!50 &7663258607366608382
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531396641543454431}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &2028980061524112300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1373,9 +1440,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 540
       objectReference: {fileID: 0}
+    - target: {fileID: 1878182126587359801, guid: 716c55d04ecce48ddbb0479d7b68c0ea, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4600431686941593931, guid: 716c55d04ecce48ddbb0479d7b68c0ea, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 4600431686941593931, guid: 716c55d04ecce48ddbb0479d7b68c0ea, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1398,6 +1473,10 @@ PrefabInstance:
     - target: {fileID: 3547343003086770049, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
       propertyPath: m_Name
       value: WaterTile (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547343003086770049, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5807041623299253331, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1439,6 +1518,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6623103691800224722, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1460,6 +1543,10 @@ PrefabInstance:
     - target: {fileID: 3547343003086770049, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
       propertyPath: m_Name
       value: WaterTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547343003086770049, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5807041623299253331, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1501,6 +1588,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6623103691800224722, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1522,6 +1613,10 @@ PrefabInstance:
     - target: {fileID: 3405206314096011616, guid: a107872b87eb341f791509dfa67f229a, type: 3}
       propertyPath: m_Name
       value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 3405206314096011616, guid: a107872b87eb341f791509dfa67f229a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8891564581937730628, guid: a107872b87eb341f791509dfa67f229a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1562,6 +1657,10 @@ PrefabInstance:
     - target: {fileID: 8891564581937730628, guid: a107872b87eb341f791509dfa67f229a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985277723075258287, guid: a107872b87eb341f791509dfa67f229a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1647,6 +1746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3405206314096011616, guid: a107872b87eb341f791509dfa67f229a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8891564581937730628, guid: a107872b87eb341f791509dfa67f229a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -1686,6 +1789,10 @@ PrefabInstance:
     - target: {fileID: 8891564581937730628, guid: a107872b87eb341f791509dfa67f229a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985277723075258287, guid: a107872b87eb341f791509dfa67f229a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1745,9 +1852,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5416968204341490847, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_Name
       value: Pressureplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1770,6 +1885,10 @@ PrefabInstance:
     - target: {fileID: 3547343003086770049, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
       propertyPath: m_Name
       value: WaterTile (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547343003086770049, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5807041623299253331, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1811,6 +1930,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6623103691800224722, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1832,6 +1955,10 @@ PrefabInstance:
     - target: {fileID: 3547343003086770049, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
       propertyPath: m_Name
       value: WaterTile (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547343003086770049, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5807041623299253331, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1872,6 +1999,10 @@ PrefabInstance:
     - target: {fileID: 5807041623299253331, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623103691800224722, guid: 138c20a4394435f42a2f9ebceb1c41f5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
