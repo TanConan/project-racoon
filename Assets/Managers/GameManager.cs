@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         LoadExtraScenes();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void LoadExtraScenes()

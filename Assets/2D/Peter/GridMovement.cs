@@ -89,7 +89,7 @@ public class GridMovement : MonoBehaviour, InputSystem.I_2DPlayerActions
             movePoint.transform.position = targetPos;
         }
     }
-    
+
     public void Teleport(Vector3 position)
     {
         transform.position = position;
