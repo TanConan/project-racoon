@@ -605,7 +605,7 @@ MonoBehaviour:
     Level: {fileID: 5501340381077870786, guid: 0f749d2c5df3d4d6f99733a21ccee9a3, type: 3}
   - CamSize: 4.5
     Level: {fileID: 5501340381077870786, guid: 41a508cebcf941d4d82234ef7e6a8c06, type: 3}
-  - CamSize: 5
+  - CamSize: 10
     Level: {fileID: 5501340381077870786, guid: 2bfe56c768a5f89468de830f14c157c3, type: 3}
   - CamSize: 5
     Level: {fileID: 5501340381077870786, guid: ec8d36d6ab42a85419770238102c06dd, type: 3}
@@ -663,7 +663,7 @@ MonoBehaviour:
     Level: {fileID: 5501340381077870786, guid: 0f261c57bda51044c80df4543e63cacd, type: 3}
   - CamSize: 5
     Level: {fileID: 5501340381077870786, guid: c5455e193fd58e94b914e2a13f4f84e9, type: 3}
-  CurrentLevelId: 1
+  CurrentLevelId: 0
 --- !u!4 &193127226
 Transform:
   m_ObjectHideFlags: 0
