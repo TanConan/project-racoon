@@ -111,6 +111,15 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""ChangeFov"",
+                    ""type"": ""Button"",
+                    ""id"": ""89f99ec3-4992-4a1e-b9d6-3d1b353174cf"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Pause"",
                     ""type"": ""Button"",
                     ""id"": ""7db95341-e8b6-474e-af1e-e1f20806ff38"",
@@ -180,6 +189,17 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""371b7390-3b4f-429c-81d7-671640de846b"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeFov"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -857,6 +877,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         m__3DPlayer = asset.FindActionMap("3DPlayer", throwIfNotFound: true);
         m__3DPlayer_Look = m__3DPlayer.FindAction("Look", throwIfNotFound: true);
         m__3DPlayer_Interact = m__3DPlayer.FindAction("Interact", throwIfNotFound: true);
+        m__3DPlayer_ChangeFov = m__3DPlayer.FindAction("ChangeFov", throwIfNotFound: true);
         m__3DPlayer_Pause = m__3DPlayer.FindAction("Pause", throwIfNotFound: true);
         m__3DPlayer_ToggleMask0 = m__3DPlayer.FindAction("ToggleMask0", throwIfNotFound: true);
         m__3DPlayer_ToggleMask1 = m__3DPlayer.FindAction("ToggleMask1", throwIfNotFound: true);
@@ -958,6 +979,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private List<I_3DPlayerActions> m__3DPlayerActionsCallbackInterfaces = new List<I_3DPlayerActions>();
     private readonly InputAction m__3DPlayer_Look;
     private readonly InputAction m__3DPlayer_Interact;
+    private readonly InputAction m__3DPlayer_ChangeFov;
     private readonly InputAction m__3DPlayer_Pause;
     private readonly InputAction m__3DPlayer_ToggleMask0;
     private readonly InputAction m__3DPlayer_ToggleMask1;
@@ -980,6 +1002,10 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "_3DPlayer/Interact".
         /// </summary>
         public InputAction @Interact => m_Wrapper.m__3DPlayer_Interact;
+        /// <summary>
+        /// Provides access to the underlying input action "_3DPlayer/ChangeFov".
+        /// </summary>
+        public InputAction @ChangeFov => m_Wrapper.m__3DPlayer_ChangeFov;
         /// <summary>
         /// Provides access to the underlying input action "_3DPlayer/Pause".
         /// </summary>
@@ -1024,6 +1050,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @ChangeFov.started += instance.OnChangeFov;
+            @ChangeFov.performed += instance.OnChangeFov;
+            @ChangeFov.canceled += instance.OnChangeFov;
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
@@ -1050,6 +1079,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @ChangeFov.started -= instance.OnChangeFov;
+            @ChangeFov.performed -= instance.OnChangeFov;
+            @ChangeFov.canceled -= instance.OnChangeFov;
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
@@ -1510,6 +1542,13 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInteract(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ChangeFov" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnChangeFov(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Pause" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
