@@ -1550,6 +1550,7 @@ GameObject:
   - component: {fileID: 1474072751}
   - component: {fileID: 1474072752}
   - component: {fileID: 1474072753}
+  - component: {fileID: 1474072754}
   m_Layer: 7
   m_Name: Peter
   m_TagString: Player
@@ -1756,6 +1757,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3dfd46d695340cbbae35a73bd419aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &1474072754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474072746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c156c2cf2e0495d980afcb075d1851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TwinMask
 --- !u!4 &1500965431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1978525679665406283, guid: 7638ae2bf209640f78394680b3c3dcdb, type: 3}
