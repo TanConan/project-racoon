@@ -74,6 +74,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "racoon.slnx",
+    "dotnet.defaultSolution": "project-racoon.slnx",
     "hide-files.files": []
 }
