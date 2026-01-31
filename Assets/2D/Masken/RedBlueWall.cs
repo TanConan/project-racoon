@@ -6,13 +6,19 @@ public class RedBlueWall : MaskListener
 
     public bool isRedwall;
     private Collider2D _collider;
-    private TilemapRenderer _tilemapRenderer;
+    private SpriteRenderer _spriteRenderer;
 
     public override void Awake()
     {
         base.Awake();
         _collider = GetComponent<Collider2D>();
-        _tilemapRenderer = GetComponent<TilemapRenderer>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        
+        _spriteRenderer.color = Color.red;
+        if (!isRedwall)
+        {
+            _spriteRenderer.color = Color.blue;
+        }
     }
 
     void Start()
@@ -28,6 +34,6 @@ public class RedBlueWall : MaskListener
     private void FlipWallStatus(ActiveMasks activeMasks)
     {
         _collider.enabled = activeMasks.HasFlag(ActiveMasks.RedBlueMask) ? isRedwall : !isRedwall;
-        _tilemapRenderer.enabled =  activeMasks.HasFlag(ActiveMasks.RedBlueMask) ? isRedwall : !isRedwall;
+        _spriteRenderer.enabled =  activeMasks.HasFlag(ActiveMasks.RedBlueMask) ? isRedwall : !isRedwall;
     }
 }
