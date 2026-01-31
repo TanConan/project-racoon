@@ -588,6 +588,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 361.68
       objectReference: {fileID: 0}
+    - target: {fileID: 1552768280289385711, guid: 53d7ca478c4d3bc45915031b621ccf08, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2733501832719958932, guid: 53d7ca478c4d3bc45915031b621ccf08, type: 3}
       propertyPath: m_Name
       value: RedBlueMask
