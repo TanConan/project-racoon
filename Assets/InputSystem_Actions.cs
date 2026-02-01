@@ -145,6 +145,15 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reset (Light Effect)"",
+                    ""type"": ""Button"",
+                    ""id"": ""e55b1c00-67f4-4fec-9508-585b0ac146a4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -233,6 +242,17 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ToggleMask1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7ba7b282-988a-4334-8c52-e365c1f30750"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reset (Light Effect)"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -873,6 +893,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         m__3DPlayer_Pause = m__3DPlayer.FindAction("Pause", throwIfNotFound: true);
         m__3DPlayer_ToggleMask0 = m__3DPlayer.FindAction("ToggleMask0", throwIfNotFound: true);
         m__3DPlayer_ToggleMask1 = m__3DPlayer.FindAction("ToggleMask1", throwIfNotFound: true);
+        m__3DPlayer_ResetLightEffect = m__3DPlayer.FindAction("Reset (Light Effect)", throwIfNotFound: true);
         // 2DPlayer
         m__2DPlayer = asset.FindActionMap("2DPlayer", throwIfNotFound: true);
         m__2DPlayer_Move = m__2DPlayer.FindAction("Move", throwIfNotFound: true);
@@ -972,6 +993,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m__3DPlayer_Pause;
     private readonly InputAction m__3DPlayer_ToggleMask0;
     private readonly InputAction m__3DPlayer_ToggleMask1;
+    private readonly InputAction m__3DPlayer_ResetLightEffect;
     /// <summary>
     /// Provides access to input actions defined in input action map "3DPlayer".
     /// </summary>
@@ -1007,6 +1029,10 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "_3DPlayer/ToggleMask1".
         /// </summary>
         public InputAction @ToggleMask1 => m_Wrapper.m__3DPlayer_ToggleMask1;
+        /// <summary>
+        /// Provides access to the underlying input action "_3DPlayer/ResetLightEffect".
+        /// </summary>
+        public InputAction @ResetLightEffect => m_Wrapper.m__3DPlayer_ResetLightEffect;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1051,6 +1077,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @ToggleMask1.started += instance.OnToggleMask1;
             @ToggleMask1.performed += instance.OnToggleMask1;
             @ToggleMask1.canceled += instance.OnToggleMask1;
+            @ResetLightEffect.started += instance.OnResetLightEffect;
+            @ResetLightEffect.performed += instance.OnResetLightEffect;
+            @ResetLightEffect.canceled += instance.OnResetLightEffect;
         }
 
         /// <summary>
@@ -1080,6 +1109,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @ToggleMask1.started -= instance.OnToggleMask1;
             @ToggleMask1.performed -= instance.OnToggleMask1;
             @ToggleMask1.canceled -= instance.OnToggleMask1;
+            @ResetLightEffect.started -= instance.OnResetLightEffect;
+            @ResetLightEffect.performed -= instance.OnResetLightEffect;
+            @ResetLightEffect.canceled -= instance.OnResetLightEffect;
         }
 
         /// <summary>
@@ -1474,6 +1506,13 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnToggleMask1(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Reset (Light Effect)" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnResetLightEffect(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "2DPlayer" which allows adding and removing callbacks.
