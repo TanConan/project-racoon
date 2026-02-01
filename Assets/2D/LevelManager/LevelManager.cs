@@ -22,7 +22,8 @@ public class LevelManager : MonoBehaviour
     public List<LevelInformation> Levels;
 
     public int CurrentLevelId = 0;
-    public int MASK_INTRO_LEVEL_ID;
+    public int RED_BLUE_MASK_LEVEL_ID;
+    public int TWIN_MASK_LEVEL_ID;
 
     private GameObject _currentLevel;
 
@@ -55,7 +56,10 @@ public class LevelManager : MonoBehaviour
             Player.GetComponent<Death>().isDying = false;
         }
         Camera2D.orthographicSize = Levels[CurrentLevelId].CamSize;
-        levelText.text = string.Format("LEVEL {0:D2}", CurrentLevelId + 1);
+        if (CurrentLevelId != 0)
+        {
+            levelText.text = string.Format("LEVEL {0:D2}", CurrentLevelId);
+        }
         FindFirstObjectByType<TwinMask>().TwinMaskLogic();
     }
 
@@ -69,10 +73,27 @@ public class LevelManager : MonoBehaviour
     {
         CurrentLevelId++;
         StartCoroutine(LoadLevel());
-        if (CurrentLevelId == MASK_INTRO_LEVEL_ID) {
-          Tutorial.Instance.Show(TutorialText.LOOK);
-          Tutorial.Instance.Show(TutorialText.ZOOM);
-          Tutorial.Instance.Show(TutorialText.INTERACT);
+        if (CurrentLevelId == RED_BLUE_MASK_LEVEL_ID)
+        {
+            ShowMaskTutorial();
+            GameObject parent = GameObject.Find("Desk");
+            GameObject mask = parent.transform.Find("RedBlueMask").gameObject;
+            mask.SetActive(true);
         }
+        if (CurrentLevelId == TWIN_MASK_LEVEL_ID)
+        {
+            GameObject parent = GameObject.Find("Desk");
+            Debug.Log(parent);
+            GameObject mask = parent.transform.Find("TwinMask").gameObject;
+            Debug.Log(mask);
+            mask.SetActive(true);
+        }
+    }
+
+    private void ShowMaskTutorial()
+    {
+        Tutorial.Instance.Show(TutorialText.LOOK);
+        Tutorial.Instance.Show(TutorialText.ZOOM);
+        Tutorial.Instance.Show(TutorialText.INTERACT);
     }
 }

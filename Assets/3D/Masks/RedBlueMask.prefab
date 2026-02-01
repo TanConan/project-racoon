@@ -69,8 +69,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FaceMask
   thisMask: 2
   tutorialText: 4
-  speed: 0.5
-  rotateSpeed: 45
+  speed: 3
+  rotateSpeed: 270
   collectDistance: 0.01
 --- !u!1001 &1823363390197309886
 PrefabInstance:
