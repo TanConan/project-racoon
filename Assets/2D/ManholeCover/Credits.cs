@@ -3,7 +3,14 @@ using UnityEngine;
 
 public class Credits : MonoBehaviour
 {
+    public Animator creditsAnimator;
+    public Canvas canvas;
     private bool isRollingCredits;
+
+    void Awake()
+    {
+        canvas.worldCamera = GameObject.Find("2D Camera").GetComponent<Camera>();
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,6 +24,6 @@ public class Credits : MonoBehaviour
     private IEnumerator CreditsRoutine()
     {
         yield return new WaitForSeconds(3f);
-        LevelManager.Instance.ReloadLevel();
+        creditsAnimator.SetTrigger("credits");
     }
 }
