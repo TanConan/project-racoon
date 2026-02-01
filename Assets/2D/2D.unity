@@ -4357,7 +4357,7 @@ GameObject:
   - component: {fileID: 2019254910}
   - component: {fileID: 2019254912}
   m_Layer: 7
-  m_Name: Main Camera
+  m_Name: 2D Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
