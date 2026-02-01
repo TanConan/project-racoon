@@ -26,13 +26,13 @@ public class Death : MonoBehaviour
     {
         if (isDying) return;
         isDying = true;
+        player.isMovementActive = false;
         peterAnimator.SetTrigger("fall");
         StartCoroutine(DeathRoutine());
     }
 
     private IEnumerator DeathRoutine()
     {
-        player.isMovementActive = false;
         yield return new WaitForSeconds(3f);
         LevelManager.Instance.ReloadLevel();
     }
