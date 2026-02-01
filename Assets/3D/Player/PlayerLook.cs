@@ -98,7 +98,7 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
             {
                 mask.OnToggleMask();
             }
-            else if (hit.collider.name == "Screen")
+            else if (LevelManager.Instance.CurrentLevelId == 0 && hit.collider.name == "Screen")
             {
                 LevelManager.Instance.NextLevel();
             }
