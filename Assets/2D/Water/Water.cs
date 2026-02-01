@@ -24,9 +24,9 @@ public class Water : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (collision.gameObject.GetComponent<Player2D>())
+        if (collision.gameObject.GetComponent<Death>())
         {
-            collision.gameObject.GetComponent<Player2D>().Die();
+            collision.gameObject.GetComponent<Death>().Die();
         }
     }
 }
