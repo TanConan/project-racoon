@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 89730930324362336}
   - component: {fileID: 4724360929375987081}
   - component: {fileID: 9022801019599637546}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Deko
   m_TagString: Untagged
   m_Icon: {fileID: 0}

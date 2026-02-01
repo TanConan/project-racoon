@@ -755,7 +755,7 @@ MonoBehaviour:
     Level: {fileID: 5501340381077870786, guid: c5455e193fd58e94b914e2a13f4f84e9, type: 3}
   - CamSize: 5
     Level: {fileID: 5501340381077870786, guid: 87e980b7c5108634eaa80974c51de0bc, type: 3}
-  CurrentLevelId: 31
+  CurrentLevelId: 13
 --- !u!4 &193127226
 Transform:
   m_ObjectHideFlags: 0

@@ -1465,11 +1465,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3796626926481123992, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.6280637
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 3796626926481123992, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.01697
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 3796626926481123992, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1514,6 +1514,10 @@ PrefabInstance:
     - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_Name
       value: Pressureplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
