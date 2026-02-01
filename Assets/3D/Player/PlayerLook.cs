@@ -136,7 +136,6 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
 
   private IEnumerator FlickerRoutine()
   {
-    Debug.Log("Flicker started");
     var amountFlashes = Random.Range(minFlashes, maxFlashes);
 
     for (var i = 0; i < amountFlashes; i++)
@@ -157,8 +156,6 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
       // Kurze zufällige Pause zwischen den Blitzen
       yield return new WaitForSeconds(Random.Range(pauseMin, pauseMax));
     }
-
-    Debug.Log("Flicker finished");
   }
 
   private IEnumerator ShowTutorial()
