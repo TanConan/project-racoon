@@ -140,20 +140,17 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
 
     for (var i = 0; i < amountFlashes; i++)
     {
-      // Ein einzelner Blitz mit Decay
       var elapsed = 0f;
       while (elapsed < flashDuration)
       {
         elapsed += Time.deltaTime;
         var normalizedTime = elapsed / flashDuration;
-        // Kurve auswerten (0 = Start, 1 = Ende des Blitzes)
         LampLight.intensity = flashCurve.Evaluate(normalizedTime);
         yield return null;
       }
 
-      LampLight.intensity = 0; // Sicherstellen, dass es nach dem Decay aus ist
+      LampLight.intensity = 0;
 
-      // Kurze zufällige Pause zwischen den Blitzen
       yield return new WaitForSeconds(Random.Range(pauseMin, pauseMax));
     }
   }
