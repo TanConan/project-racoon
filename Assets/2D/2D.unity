@@ -691,8 +691,8 @@ MonoBehaviour:
   resetAnimator: {fileID: 862958129}
   levelText: {fileID: 2074840230}
   Levels:
-  - CamSize: 8.5
-    Level: {fileID: 5501340381077870786, guid: 0f749d2c5df3d4d6f99733a21ccee9a3, type: 3}
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: c8c14348c8c9ef1459260fe871e48a94, type: 3}
   - CamSize: 5
     Level: {fileID: 5501340381077870786, guid: 41a508cebcf941d4d82234ef7e6a8c06, type: 3}
   - CamSize: 5
@@ -4501,7 +4501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac3c6f5d7ed380249b7b17c68f0f45c8, type: 2}
   m_sharedMaterial: {fileID: 2052136316832240089, guid: ac3c6f5d7ed380249b7b17c68f0f45c8, type: 2}
