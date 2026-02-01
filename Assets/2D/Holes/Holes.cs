@@ -7,6 +7,7 @@ public class Holes : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Box>())
         {
+            collision.enabled = false;
             collision.gameObject.GetComponent<Animator>().SetTrigger("FallTrigger");
             StartCoroutine(DelayedDestroyBox(collision.gameObject));
         }
