@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 4906781540593523531}
   - component: {fileID: 8831166442781766690}
   - component: {fileID: 6743143153026593151}
+  - component: {fileID: 2480072838675971252}
   m_Layer: 7
   m_Name: ManholeCover
   m_TagString: Untagged
@@ -253,3 +254,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &2480072838675971252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2851133161308542124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0daa64200c112c48bc210fc76c4febb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Credits
