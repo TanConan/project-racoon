@@ -151,3 +151,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c34eb7d726d7a64d80a275fed8b5de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Flag
+  soundboard2D: {fileID: 7328889782445812138, guid: 3d1446b2c152b4a9f8ba42322a16c599, type: 3}
