@@ -45,8 +45,17 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
         _currentLevel = Instantiate(Levels[CurrentLevelId].Level, transform);
         Player.Teleport(GameObject.FindWithTag("Respawn").transform.position);
+        if (Player.GetComponent<Death>().isDying)
+        {
+            if (Player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("peter_fall_new"))
+            {
+                Player.GetComponent<Animator>().SetTrigger("revive");
+            }
+            Player.GetComponent<Death>().isDying = false;
+        }
         Camera2D.orthographicSize = Levels[CurrentLevelId].CamSize;
         levelText.text = string.Format("LEVEL {0:D2}", CurrentLevelId + 1);
+        FindFirstObjectByType<TwinMask>().TwinMaskLogic();
     }
 
     public void ReloadLevel()

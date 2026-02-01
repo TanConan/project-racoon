@@ -1653,7 +1653,7 @@ MonoBehaviour:
   collisionMask:
     serializedVersion: 2
     m_Bits: 272
-  maskStore: {fileID: 0}
+  maskStore: {fileID: 11400000, guid: 5356cfe9f70c76e4eb5dcbcf9bc164ef, type: 2}
   movementSpeed: 6
   isMovementActive: 1
 --- !u!61 &1474072751
