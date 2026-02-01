@@ -691,69 +691,39 @@ MonoBehaviour:
   resetAnimator: {fileID: 862958129}
   levelText: {fileID: 2074840230}
   Levels:
-  - CamSize: 8.5
-    Level: {fileID: 5501340381077870786, guid: 0f749d2c5df3d4d6f99733a21ccee9a3, type: 3}
-  - CamSize: 8
+  - CamSize: 5
+    Level: {fileID: 5501340381077870786, guid: c8c14348c8c9ef1459260fe871e48a94, type: 3}
+  - CamSize: 5
     Level: {fileID: 5501340381077870786, guid: 41a508cebcf941d4d82234ef7e6a8c06, type: 3}
-  - CamSize: 10
+  - CamSize: 5
     Level: {fileID: 5501340381077870786, guid: 516d354ca30bfda4e8a62a7eb8194f40, type: 3}
-  - CamSize: 8
+  - CamSize: 7
     Level: {fileID: 5501340381077870786, guid: b90876e9a48d7584ea38a3ce3a08bdae, type: 3}
-  - CamSize: 7
+  - CamSize: 5
     Level: {fileID: 5501340381077870786, guid: 3bd505f56ab476f4d9c335e0edd2913b, type: 3}
-  - CamSize: 7
+  - CamSize: 5
     Level: {fileID: 5501340381077870786, guid: ad3da0ce4bfade543b826b8fcc645b89, type: 3}
-  - CamSize: 8
+  - CamSize: 10
     Level: {fileID: 5501340381077870786, guid: b1f5fb33182aa9341bdf2a863b2a27e0, type: 3}
-  - CamSize: 8
+  - CamSize: 7
+    Level: {fileID: 5501340381077870786, guid: cd0b5e4db6614854889167a548738c02, type: 3}
+  - CamSize: 5
     Level: {fileID: 5501340381077870786, guid: c89752c8a65ffb443b5f0304c7b3ba81, type: 3}
   - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: 59ab93a6fb940994d9b018a2b6b6c8cd, type: 3}
-  - CamSize: 8
     Level: {fileID: 5501340381077870786, guid: b684552d3acc19f46acb63e95dc3ec24, type: 3}
-  - CamSize: 9
+  - CamSize: 7.5
     Level: {fileID: 5501340381077870786, guid: b04459e1d927c8c4da3edc602c70c83e, type: 3}
   - CamSize: 8
+    Level: {fileID: 5501340381077870786, guid: 59ab93a6fb940994d9b018a2b6b6c8cd, type: 3}
+  - CamSize: 6
     Level: {fileID: 5501340381077870786, guid: 11a8532a3b9e8b1488a0f4e8ee4996dc, type: 3}
-  - CamSize: 8
+  - CamSize: 7
     Level: {fileID: 5501340381077870786, guid: b4ae587bf47d4a341ac7d1eeab19d126, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: f4f86c2cc30e8d0478270dffdb691ff0, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: 5f350c0d25e231f4a87f56ad6c43adcb, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: b04459e1d927c8c4da3edc602c70c83e, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: cd0b5e4db6614854889167a548738c02, type: 3}
-  - CamSize: 8
+  - CamSize: 9.5
     Level: {fileID: 5501340381077870786, guid: a982abaa828921548ace699b8b8d37aa, type: 3}
-  - CamSize: 8
+  - CamSize: 10
     Level: {fileID: 5501340381077870786, guid: ded80f29e0958154896bbd4a0a48868b, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: 7ea19342bcd9e3e4eb8fce2a86bd5de6, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: 5620456ca3816864d9f5e2d48850eb29, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: f863948c143b0cb4dbf270207d2668d0, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: 4c693b7d9e39aaa41b41d432c89d7a3c, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: eee4799ad96e6364d9407f6ef95db9be, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: b4d01efecafb2ef448820c5d70baf9c9, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: f58af8dbef7bce149a91820cd16ba759, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: dda2b8848094c2a49a06af05c853b984, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: 11a8f710dbc59124c83d7723de132083, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: 300e10b3e86bd5f44a43be0a87e4c21c, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: 0f261c57bda51044c80df4543e63cacd, type: 3}
-  - CamSize: 8
-    Level: {fileID: 5501340381077870786, guid: c5455e193fd58e94b914e2a13f4f84e9, type: 3}
-  - CamSize: 5
+  - CamSize: 4
     Level: {fileID: 5501340381077870786, guid: 87e980b7c5108634eaa80974c51de0bc, type: 3}
   CurrentLevelId: 0
   RED_BLUE_MASK_LEVEL_ID: 8
@@ -4531,7 +4501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac3c6f5d7ed380249b7b17c68f0f45c8, type: 2}
   m_sharedMaterial: {fileID: 2052136316832240089, guid: ac3c6f5d7ed380249b7b17c68f0f45c8, type: 2}
