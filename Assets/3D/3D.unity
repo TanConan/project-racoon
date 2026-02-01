@@ -3470,9 +3470,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6079031906820739180, guid: 229308419b6a54215883c67270d13919, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6406057747848312553, guid: 229308419b6a54215883c67270d13919, type: 3}
       propertyPath: m_Name
       value: Desk
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192391021464791608, guid: 229308419b6a54215883c67270d13919, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3738,9 +3746,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 820536247}
     m_Modifications:
+    - target: {fileID: 803366136273499362, guid: 058cde732ab8f49079ee1a7b51e39ba4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 906749324094656865, guid: 058cde732ab8f49079ee1a7b51e39ba4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1289672328711240641, guid: 058cde732ab8f49079ee1a7b51e39ba4, type: 3}
       propertyPath: m_Name
       value: DeskLamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289672328711240641, guid: 058cde732ab8f49079ee1a7b51e39ba4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364574459633244632, guid: 058cde732ab8f49079ee1a7b51e39ba4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094351370936629802, guid: 058cde732ab8f49079ee1a7b51e39ba4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2480015845980576196, guid: 058cde732ab8f49079ee1a7b51e39ba4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4649635672082126658, guid: 058cde732ab8f49079ee1a7b51e39ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3781,6 +3813,14 @@ PrefabInstance:
     - target: {fileID: 4649635672082126658, guid: 058cde732ab8f49079ee1a7b51e39ba4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997406716993717664, guid: 058cde732ab8f49079ee1a7b51e39ba4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098609779102010115, guid: 058cde732ab8f49079ee1a7b51e39ba4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
