@@ -17,12 +17,6 @@ public class GridMovement : MonoBehaviour, InputSystem.I_2DPlayerActions
     private InputSystem _inputSystem;
     private Vector2 _inputVector;
 
-    void Start()
-    {
-        if (!CompareTag("Twin")) return;
-        FindFirstObjectByType<TwinMask>().TwinMaskLogic();
-    }
-
     private void Update()
     {
         if (isMovementActive)
@@ -32,7 +26,6 @@ public class GridMovement : MonoBehaviour, InputSystem.I_2DPlayerActions
         else
         {
             _inputSystem._2DPlayer.Disable();
-            return;
         }
 
         transform.position =

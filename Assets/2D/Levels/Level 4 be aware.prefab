@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 89730930324362336}
   - component: {fileID: 4724360929375987081}
   - component: {fileID: 9022801019599637546}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Deko
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1028,6 +1028,7 @@ GameObject:
   - component: {fileID: 2033355305751128721}
   - component: {fileID: 159389985338926229}
   - component: {fileID: 1403693853947349496}
+  - component: {fileID: 4784981861186427105}
   m_Layer: 7
   m_Name: Holes
   m_TagString: Untagged
@@ -1391,6 +1392,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4784981861186427105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7954078281569096400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de1cf4ec91609247abec76d007cc13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Holes
 --- !u!1001 &108865750636953453
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2002,6 +2002,14 @@ PrefabInstance:
       propertyPath: 'doors.Array.data[0]'
       value: 
       objectReference: {fileID: 5634704732679560507}
+    - target: {fileID: 7092606551030705184, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: doors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092606551030705184, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: 'doors.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5634704732679560507}
     - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_Name
       value: Pressureplate
@@ -2345,6 +2353,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5835000919598858726, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: 'doors.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3308313273427025923}
+    - target: {fileID: 7092606551030705184, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: doors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092606551030705184, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: 'doors.Array.data[0]'
       value: 
       objectReference: {fileID: 3308313273427025923}
