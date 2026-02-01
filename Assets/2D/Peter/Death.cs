@@ -19,6 +19,7 @@ public class Death : MonoBehaviour
         if (isDying) return;
         isDying = true;
         player.isMovementActive = false;
+        GetComponent<GridMovement>().isMovementActive = false;
         LevelManager.Instance.ReloadLevel();
     }
 
@@ -26,6 +27,7 @@ public class Death : MonoBehaviour
     {
         if (isDying) return;
         isDying = true;
+        GetComponent<GridMovement>().isMovementActive = false;
         player.isMovementActive = false;
         peterAnimator.SetTrigger("fall");
         StartCoroutine(DeathRoutine());
