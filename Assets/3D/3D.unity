@@ -1424,6 +1424,7 @@ Transform:
   - {fileID: 820536247}
   - {fileID: 214280947}
   - {fileID: 1866849534}
+  - {fileID: 865342078689767905}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &878904579
@@ -3354,6 +3355,68 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be43b6ecb9c6346a8bc5b1988dfb2054, type: 3}
+--- !u!1001 &865342078689767904
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 864619684}
+    m_Modifications:
+    - target: {fileID: 693605871124025170, guid: 4b199434a182e4f93b7c506197892af9, type: 3}
+      propertyPath: m_Name
+      value: Fan Ceiling
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423305856963110913, guid: 4b199434a182e4f93b7c506197892af9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423305856963110913, guid: 4b199434a182e4f93b7c506197892af9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.611
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423305856963110913, guid: 4b199434a182e4f93b7c506197892af9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.465
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423305856963110913, guid: 4b199434a182e4f93b7c506197892af9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423305856963110913, guid: 4b199434a182e4f93b7c506197892af9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423305856963110913, guid: 4b199434a182e4f93b7c506197892af9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423305856963110913, guid: 4b199434a182e4f93b7c506197892af9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423305856963110913, guid: 4b199434a182e4f93b7c506197892af9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423305856963110913, guid: 4b199434a182e4f93b7c506197892af9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423305856963110913, guid: 4b199434a182e4f93b7c506197892af9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b199434a182e4f93b7c506197892af9, type: 3}
+--- !u!4 &865342078689767905 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8423305856963110913, guid: 4b199434a182e4f93b7c506197892af9, type: 3}
+  m_PrefabInstance: {fileID: 865342078689767904}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1689356169154519688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3362,10 +3425,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 864619684}
     m_Modifications:
-    - target: {fileID: 1184968477247904616, guid: 229308419b6a54215883c67270d13919, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 3361970509173177506, guid: 229308419b6a54215883c67270d13919, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3409,10 +3468,6 @@ PrefabInstance:
     - target: {fileID: 6406057747848312553, guid: 229308419b6a54215883c67270d13919, type: 3}
       propertyPath: m_Name
       value: Desk
-      objectReference: {fileID: 0}
-    - target: {fileID: 6552961878327782306, guid: 229308419b6a54215883c67270d13919, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
