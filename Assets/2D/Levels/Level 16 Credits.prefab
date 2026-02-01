@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Maximilian "Makoeta" Koening
+  m_text: Maximilian "Makoeta" Koenig
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac3c6f5d7ed380249b7b17c68f0f45c8, type: 2}
   m_sharedMaterial: {fileID: 2052136316832240089, guid: ac3c6f5d7ed380249b7b17c68f0f45c8, type: 2}

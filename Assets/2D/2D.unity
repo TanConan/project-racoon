@@ -1489,17 +1489,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1277810315 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7328889782445812138, guid: 3d1446b2c152b4a9f8ba42322a16c599, type: 3}
-  m_PrefabInstance: {fileID: 2042396257}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a728221aa38f24e078c676438e6e3c64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &1474072746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,7 +1713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3dfd46d695340cbbae35a73bd419aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  soundboard2D: {fileID: 1277810315}
   isDying: 0
 --- !u!114 &1474072754
 MonoBehaviour:
@@ -4466,15 +4454,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 302393482427319883, guid: 3d1446b2c152b4a9f8ba42322a16c599, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.03983
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 302393482427319883, guid: 3d1446b2c152b4a9f8ba42322a16c599, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.88227
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 302393482427319883, guid: 3d1446b2c152b4a9f8ba42322a16c599, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.62038
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 302393482427319883, guid: 3d1446b2c152b4a9f8ba42322a16c599, type: 3}
       propertyPath: m_LocalRotation.w
