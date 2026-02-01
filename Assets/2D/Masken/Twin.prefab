@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 6776418424575087240}
   - component: {fileID: 600767541765477905}
   - component: {fileID: 5728761986554444474}
+  - component: {fileID: 4419023809585813649}
   m_Layer: 8
   m_Name: Twin
   m_TagString: Twin
@@ -216,6 +217,7 @@ MonoBehaviour:
   collisionMask:
     serializedVersion: 2
     m_Bits: 256
+  maskStore: {fileID: 0}
   movementSpeed: 6
   isMovementActive: 0
 --- !u!95 &5728761986554444474
@@ -240,3 +242,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4419023809585813649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6862051416728203073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3dfd46d695340cbbae35a73bd419aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Death
+  isDying: 0
