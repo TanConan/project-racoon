@@ -3,7 +3,27 @@ guid: 84c89526930a3794ea70c49e9d9c8a5f
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: coffee_mug_sub_coffe_mug_m_Height
+    second: {fileID: 2800000, guid: 23d8d733d342c4c5183cc93e8bcf22e3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: coffee_mug_sub_coffe_mug_m_Metallic
+    second: {fileID: 2800000, guid: 0dc546d967bfc4d6dab245c9c5a36536, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: coffee_mug_sub_coffe_mug_m_Normal
+    second: {fileID: 2800000, guid: 6d2585430d2d94520930266a342ba39e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: coffee_mug_sub_coffe_mug_m_Roughness
+    second: {fileID: 2800000, guid: 233332f73c10a4cc49b782a07634d315, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
