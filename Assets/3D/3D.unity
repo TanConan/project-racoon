@@ -934,9 +934,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InvertController
   rendererData: {fileID: 11400000, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
-  featureName: FSPRF Invert
+  invertFeatureName: FSPRF Invert
+  redBlueFeatureName: FSPRF RB
   crtMaterial: {fileID: 2100000, guid: c1f21d9467b39b04ea1577d120faafac, type: 2}
   invertMaterial: {fileID: 2100000, guid: d11cbdf8ed261f442bff5d8dfbe954ea, type: 2}
+  redBlueMaterial: {fileID: 2100000, guid: a13b7a5436134ff44877d6fbaccb3a9b, type: 2}
   fadeSpeed: 2
 --- !u!1001 &393820949
 PrefabInstance:
