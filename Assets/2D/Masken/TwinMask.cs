@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class TwinMask : MaskListener
@@ -9,6 +10,7 @@ public class TwinMask : MaskListener
 
     public void TwinMaskLogic()
     {
+        if (FindObjectsByType<Death>(FindObjectsSortMode.None).Any(d => d.isDying)) return;
         var twin = GameObject.FindWithTag("Twin");
         if (twin != null)
         {
