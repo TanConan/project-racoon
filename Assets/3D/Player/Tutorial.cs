@@ -69,7 +69,7 @@ public class Tutorial : MonoBehaviour
             TutorialText.ZOOM => "[Press right click to zoom]",
             TutorialText.WASD => "[Press WASD to move Peter]",
             TutorialText.RESET => "[Press R to reset the level]",
-            TutorialText.INTERACT => "[Press left click to pick up #####]",
+            TutorialText.INTERACT => "[Press left click to pick up #@&/%]",
             TutorialText.MASK1 => "[Press 1 to toggle Mask]",
             TutorialText.MASK2 => "[Press 2 to toggle Mask]",
             TutorialText.LOOK => "[Use your Mouse to look around]",
