@@ -22,6 +22,7 @@ public class LevelManager : MonoBehaviour
     public List<LevelInformation> Levels;
 
     public int CurrentLevelId = 0;
+    public int MASK_INTRO_LEVEL_ID;
 
     private GameObject _currentLevel;
 
@@ -68,5 +69,10 @@ public class LevelManager : MonoBehaviour
     {
         CurrentLevelId++;
         StartCoroutine(LoadLevel());
+        if (CurrentLevelId == MASK_INTRO_LEVEL_ID) {
+          Tutorial.Instance.Show(TutorialText.LOOK);
+          Tutorial.Instance.Show(TutorialText.ZOOM);
+          Tutorial.Instance.Show(TutorialText.INTERACT);
+        }
     }
 }
