@@ -1,12 +1,12 @@
-# Retap Inc.
+# Retep Inc.
 
 ## Description
 
-A 4th wall-breaking puzzle game about Peter who hates his office job. One day he decided that it was time to boot up an old game named he found at a thrift store. Some pixelated puzzle game about a racoon with the same name. Something seems off though. The later levels are unbeatable, but there has to be something you can do to change that. At least something that distracts Peter from work.
+A 4th wall-breaking puzzle game about Peter who hates his office job. One day he decided that it was time to boot up an old game he found at a thrift store. Some pixelated puzzle game about a racoon with the same name. Something seems off though. The later levels are unbeatable, but there has to be something you can do to change that. At least something that distracts Peter from work.
 
 ## Controls
 
-- WASD or Arrow-Keys: Move Player in 2D
-- Move Mouse: Look around in 3D
-- Right-Click: Toggle zoom
-- Left-Click: Collect item
+    - WASD or Arrow-Keys: Move Player in 2D
+    - Move Mouse: Look around in 3D
+    - Right-Click: Toggle zoom
+    - Left-Click: Collect item
