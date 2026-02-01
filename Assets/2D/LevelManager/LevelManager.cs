@@ -70,11 +70,21 @@ public class LevelManager : MonoBehaviour
   {
     CurrentLevelId++;
     StartCoroutine(LoadLevel());
-    if (CurrentLevelId == RED_BLUE_MASK_LEVEL_ID) {
+    if (CurrentLevelId == RED_BLUE_MASK_LEVEL_ID)
+    {
       ShowMaskTutorial();
-      GameObject.Find("");
-      }
-    if (CurrentLevelId == TWIN_MASK_LEVEL_ID) { ShowMaskTutorial(); }
+      GameObject parent = GameObject.Find("Desk");
+      GameObject mask = parent.transform.Find("RedBlueMask").gameObject;
+      mask.SetActive(true);
+    }
+    if (CurrentLevelId == TWIN_MASK_LEVEL_ID)
+    {
+      GameObject parent = GameObject.Find("Desk");
+      Debug.Log(parent);
+      GameObject mask = parent.transform.Find("TwinMask").gameObject;
+      Debug.Log(mask);
+      mask.SetActive(true);
+    }
   }
 
   private void ShowMaskTutorial()
