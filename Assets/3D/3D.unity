@@ -4404,6 +4404,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 61.4
       objectReference: {fileID: 0}
+    - target: {fileID: 2143699332788480764, guid: c1c454e9a4ced4f0f87f99ea9a9e33cf, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284913751196579627, guid: c1c454e9a4ced4f0f87f99ea9a9e33cf, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5390461464609017654, guid: c1c454e9a4ced4f0f87f99ea9a9e33cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.09
@@ -4447,6 +4455,10 @@ PrefabInstance:
     - target: {fileID: 7215808875788871795, guid: c1c454e9a4ced4f0f87f99ea9a9e33cf, type: 3}
       propertyPath: m_Name
       value: Book
+      objectReference: {fileID: 0}
+    - target: {fileID: 7215808875788871795, guid: c1c454e9a4ced4f0f87f99ea9a9e33cf, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
