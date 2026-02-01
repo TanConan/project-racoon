@@ -894,6 +894,72 @@ MonoBehaviour:
   sensitivity: 0.1
   yLookLimit: 75
   xLookLimit: 170
+  LampLight: {fileID: 410087040}
+  flashCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0000013625249
+      value: 0.9999774
+      inSlope: -3.7440155
+      outSlope: -3.7440155
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.18800567
+      value: 0.29608637
+      inSlope: -0.3650632
+      outSlope: -0.3650632
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.3744214
+      value: 0.8579227
+      inSlope: 0.598379
+      outSlope: 0.598379
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.62290084
+      value: 0.40640295
+      inSlope: 0.83447385
+      outSlope: 0.83447385
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7512449
+      value: 0.85382044
+      inSlope: 0.026852489
+      outSlope: 0.026852489
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -3.4323738
+      outSlope: -3.4323738
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  flashDuration: 0.05
+  minFlashes: 2
+  maxFlashes: 4
+  pauseMin: 0.08
+  pauseMax: 0.15
   fovChangeSpeed: 15
   fovNormal: 60
   fovScreen: 40
@@ -934,9 +1000,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InvertController
   rendererData: {fileID: 11400000, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
-  featureName: FSPRF Invert
+  invertFeatureName: FSPRF Invert
+  redBlueFeatureName: FSPRF RB
   crtMaterial: {fileID: 2100000, guid: c1f21d9467b39b04ea1577d120faafac, type: 2}
   invertMaterial: {fileID: 2100000, guid: d11cbdf8ed261f442bff5d8dfbe954ea, type: 2}
+  redBlueMaterial: {fileID: 2100000, guid: a13b7a5436134ff44877d6fbaccb3a9b, type: 2}
   fadeSpeed: 2
 --- !u!1001 &393820949
 PrefabInstance:
@@ -1018,14 +1086,13 @@ GameObject:
   - component: {fileID: 410087041}
   - component: {fileID: 410087040}
   - component: {fileID: 410087042}
-  - component: {fileID: 410087043}
   m_Layer: 6
   m_Name: FlackyLamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -1037,7 +1104,7 @@ Light:
   serializedVersion: 12
   m_Type: 1
   m_Color: {r: 0.5471698, g: 0.5136169, b: 0.5136169, a: 1}
-  m_Intensity: 7
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1135,24 +1202,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!114 &410087043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410087039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa5e8e3436cae4432b90cb2297f6cbf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LampBehaviour
-  pauseDurschnitt: 5
-  pauseAbweichung: 2
-  minBlitze: 6
-  maxBlitze: 8
-  speedMin: 0.05
-  speedMax: 0.2
 --- !u!1001 &460653870
 PrefabInstance:
   m_ObjectHideFlags: 0
