@@ -2795,6 +2795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pressureplate 5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2927,6 +2931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pressureplate 5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2996,6 +3004,10 @@ PrefabInstance:
     - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_Name
       value: Pressureplate 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3462,6 +3474,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pressureplate 4 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3667,6 +3683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pressureplate 4 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3860,6 +3880,10 @@ PrefabInstance:
     - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_Name
       value: Pressureplate 3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4442,6 +4466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pressureplate 3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4635,6 +4663,10 @@ PrefabInstance:
     - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_Name
       value: Pressureplate 4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5097,6 +5129,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pressureplate 3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5166,6 +5202,10 @@ PrefabInstance:
     - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_Name
       value: Pressureplate 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5302,6 +5342,10 @@ PrefabInstance:
     - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_Name
       value: Pressureplate 4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6023,6 +6067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pressureplate 4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6217,6 +6265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pressureplate 3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6348,6 +6400,10 @@ PrefabInstance:
     - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
       propertyPath: m_Name
       value: Pressureplate 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025662401164730391, guid: d49289d42d56e4e2b86d0e2aad230c7d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
