@@ -48,8 +48,8 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
     _3DPlayerActions = inputSystem._3DPlayer;
     _3DPlayerActions.AddCallbacks(this);
     wantedFOV = fovNormal;
-    // TODO REMOVE
-    unlockedMasks = ActiveMasks.RedBlueMask | ActiveMasks.TwinMask;
+    // Debug unlocking all masks
+    // unlockedMasks = ActiveMasks.RedBlueMask | ActiveMasks.TwinMask;
   }
 
   private void Start()
