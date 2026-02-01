@@ -102,6 +102,11 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
             {
                 LevelManager.Instance.NextLevel();
             }
+            else if (hit.collider.TryGetComponent<SuckIn>(out var suck))
+            {
+                _3DPlayerActions.Disable();
+                suck.Suck();
+            }
         }
     }
 
