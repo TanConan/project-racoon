@@ -37,6 +37,11 @@ public class Credits : MonoBehaviour
   private IEnumerator CreditsRoutine()
   {
     yield return new WaitForSeconds(3f);
+    GameObject parent = GameObject.Find("Manhole");
+    GameObject manhole = parent.transform.Find("3D_manhole").gameObject;
+    GameObject hole = parent.transform.Find("Hole").gameObject;
+    manhole.transform.position += new Vector3(0, 0, -0.6f);
+    hole.SetActive(true);
     creditsAnimator.SetTrigger("credits");
   }
 }
