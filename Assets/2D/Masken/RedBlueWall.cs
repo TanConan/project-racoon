@@ -38,7 +38,7 @@ public class RedBlueWall : MaskListener
             {
                 // 2. Logik nur prüfen, WENN es ein Player ist
                 var shouldDie = activeMasks.HasFlag(ActiveMasks.RedBlueMask) ? isRedwall : !isRedwall;
-
+                Debug.Log(player.gameObject.name);
                 if (shouldDie)
                 {
                     player.Die();
