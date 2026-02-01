@@ -3,7 +3,57 @@ guid: 272d2d7e9d5673b42ac1af82b2781c95
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface15
+    second: {fileID: 2100000, guid: 70c81a9bc97ef4f44bf9fcee1b409169, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface16
+    second: {fileID: 2100000, guid: ea2fffe86f6ce458d8462c7e4efc7204, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: book_02_sub_book_02_main_m_Height
+    second: {fileID: 2800000, guid: 139e249f49f024c66b7ea72d9d1501ed, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: book_02_sub_book_02_main_m_Metallic
+    second: {fileID: 2800000, guid: 7c889467b3d38468ba819d2f4555ce1b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: book_02_sub_book_02_main_m_Normal
+    second: {fileID: 2800000, guid: 92bd27de05260494dbb21cffd926c7e2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: book_02_sub_book_02_main_m_Roughness
+    second: {fileID: 2800000, guid: 8c4dbc606d409488589337ecc81ad62c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: book_02_sub_book_paper_m_Height
+    second: {fileID: 2800000, guid: 8ede356bdb79447798ccfec7bd48de45, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: book_02_sub_book_paper_m_Metallic
+    second: {fileID: 2800000, guid: e74b7fa7246004a5382a10f641ddf73f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: book_02_sub_book_paper_m_Normal
+    second: {fileID: 2800000, guid: 6e1085a860c614b12849c7e771b3eac7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: book_02_sub_book_paper_m_Roughness
+    second: {fileID: 2800000, guid: ac9cc93a9a9464b9687d21e98a77f539, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
