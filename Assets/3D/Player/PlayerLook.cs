@@ -102,12 +102,18 @@ public class PlayerLook : MonoBehaviour, InputSystem.I_3DPlayerActions
             {
                 LevelManager.Instance.NextLevel();
             }
-            else if (hit.collider.TryGetComponent<SuckIn>(out var suck))
+            else if (hit.collider.name == "Hole")
             {
                 _3DPlayerActions.Disable();
-                suck.Suck();
+                GetComponent<Animator>().enabled = true;
+                GetComponent<Animator>().SetTrigger("suck");
             }
         }
+    }
+
+    public void OnSuck()
+    {
+        Application.Quit();
     }
 
     public void OnLook(InputAction.CallbackContext context)

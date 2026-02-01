@@ -442,6 +442,7 @@ GameObject:
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
   - component: {fileID: 330585549}
+  - component: {fileID: 330585550}
   m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -695,6 +696,28 @@ MonoBehaviour:
   invertMaterial: {fileID: 2100000, guid: d11cbdf8ed261f442bff5d8dfbe954ea, type: 2}
   redBlueMaterial: {fileID: 2100000, guid: a13b7a5436134ff44877d6fbaccb3a9b, type: 2}
   fadeSpeed: 2
+--- !u!95 &330585550
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2a9046ee8049c784cbf39d8ad1b601d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &393820949
 PrefabInstance:
   m_ObjectHideFlags: 0
