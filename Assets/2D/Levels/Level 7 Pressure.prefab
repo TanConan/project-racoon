@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4834841025691015692}
   - component: {fileID: 4378218824024997773}
   - component: {fileID: 6890463510683772363}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Deko
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1274,7 +1274,7 @@ GameObject:
   - component: {fileID: 6591502474349136750}
   - component: {fileID: 7780261113912591207}
   - component: {fileID: 2250210823355201356}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Holes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
